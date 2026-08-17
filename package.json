@@ -2,12 +2,13 @@
   "name": "stargazers-action",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./app/main.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx ./app/main.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "tutosrive",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^3.0.1",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
-    "typescript": "^7.0.2"
+    "tsx": "^4.23.12",
+    "typescript": "5"
   }
 }
