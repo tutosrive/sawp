@@ -1,6 +1,6 @@
 import {Client} from 'pg'
-
-
+import {readFile} from 'node:fs/promises'
+    
 export default class DB{
     private URL:string
     private client
@@ -8,23 +8,31 @@ export default class DB{
 
     constructor(){
         this.URL = process.env.DB_CONNECTION_URL
-        this.getClient()
+        //this.getClient()
+        this.createTables()
+    }
+
+    private async createTables(){
+        const tables = await readFile('app/database/tables.sql', 'utf-8')
+        console.log(tables)
+        const req = async () => {
+            await this.client.query("")
+        }
+        //this.handleExecuteTimeout(req, 5000)
     }
 
     private async getClient(){
         this.client = await new Client({connectionString: this.URL}).connect()
-        //this.handleCloseTimeout()
+        this.handleCloseTimeout()
     }
 
     private async handleCloseTimeout(isNew: boolean = false){
         if(isNew === true){
-            console.info(`Is New timeout: ${isNew}`)
-            console.info(`Previous timeout: ${this.timeout}`)
             this.timeout = null
         }
         this.timeout = setTimeout(async () => {
             await this.client.end()
-            console.info('Client closed after 5 seconds of inactivity after start')
+            console.info('Client closed after 5 seconds of inactivity.')
             this.timeout = null
         }, 5000)
     }
@@ -33,11 +41,7 @@ export default class DB{
         let tmot = setTimeout(()=>{callback(); tmot = null}, time)
     }
 
-    async addData(table: string, data){
-        const query = {
-            text: 'CREATE TABLE IF NOT EXISTS test1(id INTEGER PRIMARY KEY);'
-        }
-        console.log(`Executing query: "${query.text}"`)
+    async addData(query){
         const req = async () => {
             await this.client.query(query)
             this.handleCloseTimeout(true)
