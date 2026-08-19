@@ -7,7 +7,7 @@ export default async function createInsertQuery(data){
     INSERT INTO user VALUES ${users};
     INSERT INTO language VALUES ${languages};
     INSERT INTO repository VALUES ${repositories};`
-    await writeFile('app/test.txt', query)
+    await writeFile('app/test.txt', query, 'utf8')
     
 }
 
@@ -34,7 +34,6 @@ function parseData(data){
         delete repo.primaryLanguage
         repos.push(repo)
     }
-console.log(owners)
     const users = arrayPlain(owners)
     const repositories = arrayPlain(repos)
     const languages = arrayPlain(langs)
@@ -55,10 +54,15 @@ function arrayPlain(arr){
     return data.join(', ')
 }
 
-function plainObject(obj): string{
+function plainObject(obj): string {
     let str = '('
     for(let key in obj) {
-        str += `${obj[key]},`
+        let value = obj[key]
+        if((typeof value) === 'string'){
+            str += `'${value}',`
+        } else {
+            str += `${value},`
+        }
     }
     str +=')'
 

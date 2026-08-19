@@ -10,7 +10,7 @@ import createInsertQuery from './supabase/query.ts'
 async function run(){
     //getEnvVars()
     try{
-        const data = await readFile('app/data.json') //await rung()
+        const data = await readFile('app/data.json', 'utf8') //await rung()
         //await writeFile('app/data.json', JSON.stringify(data))
         //if(data.user && data.repositories){
         //    const dataPushed = await runs(data)
@@ -18,7 +18,6 @@ async function run(){
         //    throw new Error("Data is not valid ...")
         //}
         const dt = JSON.parse(data)
-        console.log(dt.repositories)
         createInsertQuery(dt)
     } catch(e){
         console.error("Has happend an error getting Data:")
