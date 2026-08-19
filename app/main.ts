@@ -4,21 +4,21 @@ import 'dotenv/config'
 import {getEnvVars} from './utils/env.utils.ts'
 import rung from './github/run.ts'
 import runs from './supabase/run.ts'
-import {readFile} from 'node:fs/promises'
-import createInsertQuery from './supabase/query.ts'
+//import {readFile} from 'node:fs/promises'
+//import createInsertQuery from './supabase/query.ts'
 
 async function run(){
     //getEnvVars()
     try{
-        const data = await readFile('app/data.json', 'utf8') //await rung()
+        const data = await rung() //await readFile('app/data.json', 'utf8')
         //await writeFile('app/data.json', JSON.stringify(data))
-        //if(data.user && data.repositories){
-        //    const dataPushed = await runs(data)
-        //}else{
-        //    throw new Error("Data is not valid ...")
-        //}
-        const dt = JSON.parse(data)
-        createInsertQuery(dt)
+        if(data.user && data.repositories){
+            const dataPushed = await runs(data)
+        }else{
+            throw new Error("Data is not valid ...")
+        }
+        //const dt = JSON.parse(data)
+        //createInsertQuery(dt)
     } catch(e){
         console.error("Has happend an error getting Data:")
         console.error(e)

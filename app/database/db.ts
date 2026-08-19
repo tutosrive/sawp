@@ -8,33 +8,20 @@ export default class DB{
 
     constructor(){
         this.URL = process.env.DB_CONNECTION_URL
-        //this.getClient()
+        this.getClient()
         this.createTables()
     }
 
     private async createTables(){
-        const tables = await readFile('app/database/tables.sql', 'utf-8')
-        console.log(tables)
+        const tables = await readFile('app/database/tables.sql', 'utf8')
         const req = async () => {
-            await this.client.query("")
+            await this.client.query(tables)
         }
-        //this.handleExecuteTimeout(req, 5000)
+        this.handleExecuteTimeout(req, 5000)
     }
 
     private async getClient(){
         this.client = await new Client({connectionString: this.URL}).connect()
-        this.handleCloseTimeout()
-    }
-
-    private async handleCloseTimeout(isNew: boolean = false){
-        if(isNew === true){
-            this.timeout = null
-        }
-        this.timeout = setTimeout(async () => {
-            await this.client.end()
-            console.info('Client closed after 5 seconds of inactivity.')
-            this.timeout = null
-        }, 5000)
     }
 
     private handleExecuteTimeout(callback, time: Int = 2000){
@@ -43,14 +30,14 @@ export default class DB{
 
     async addData(query){
         const req = async () => {
-            await this.client.query(query)
-            this.handleCloseTimeout(true)
+            const q = {text: query}
+            await this.client.query(q)
         }
         this.runCallback(req, 5000)
     }
 
     private runCallback(req, time){
-        if(this.client === undefined || thid.client === null){
+        if(this.client === undefined || this.client === null){
             this.handleExecuteTimeout(req, time)
         } else {
             req()

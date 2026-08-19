@@ -1,14 +1,16 @@
-import {writeFile} from 'node:fs/promises'
+//import {writeFile} from 'node:fs/promises'
 
-export default async function createInsertQuery(data){
-    const tables = ['admin', 'user', 'language', 'repository']
+// TODO: Missing make combined fields like 'readme_url'
+
+export default function createInsertQuery(data){
+    const tables = ['admin', 'owner', 'language', 'repository']
     const {admin, users, languages, repositories} = parseData(data)
     let query = `INSERT INTO admin VALUES ${admin};
-    INSERT INTO user VALUES ${users};
-    INSERT INTO language VALUES ${languages};
-    INSERT INTO repository VALUES ${repositories};`
-    await writeFile('app/test.txt', query, 'utf8')
-    
+    INSERT INTO owner VALUES ${users};`
+    //INSERT INTO language VALUES ${languages};
+    //INSERT INTO repository VALUES ${repositories};`
+    //await writeFile('app/test.txt', query, 'utf8')
+    return query.replaceAll(',)', ')')
 }
 
 function parseData(data){
