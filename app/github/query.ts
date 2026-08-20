@@ -1,3 +1,18 @@
+const license:string = `licenseInfo{
+    id
+    name
+    url
+}`
+
+const topic:string = `repositoryTopics(first:100){
+    nodes{
+        topic{
+            id
+            name
+        }
+    }
+}`
+
 const primaryLanguage:string = `primaryLanguage{
     id
     color
@@ -27,6 +42,8 @@ const starredRepos:string = `starredRepositories(first: $first){
         url
         ${primaryLanguage}
         ${owner}
+        ${topic}
+        ${license}
     }
 }`
 

@@ -1,0 +1,88 @@
+import {writeFile} from 'node:fs/promises'
+
+export default function createInsertQuery(data){
+    const {admin, users, languages, repositories, topics, topicsXrepo, licenses} = parseData(data)
+    const tables = [
+        {name: 'admin', data: admin},
+        {name: 'owner', data: users},
+        {name: 'language', data: languages},
+        {name: 'repository', data: repositories},
+        {name: 'licenses', data: licenses}
+    ]
+    let query = ''
+    tables.forEach(table => {query += `INSERT INTO ${table.name} VALUES ${table.data};`})
+    const write = async ()=> {await writeFile('app/test.txt', query, 'utf8')}
+    write()
+    return query.replaceAll(',)', ')')
+}
+
+async function parseData(data){
+    data.user.stargazerCount = data.repositories.stargazerCount
+    delete data.repositories.stargazerCount
+    const admin = plainObject(data.user)
+    let topics = arrayPlain(data.reposTopics)
+    let topicsXrepo = arrayPlain(data.topicsXrepo)
+    let licenses = arrayPlain(data.licenses)
+    let langs = []
+    let owners = []
+    let repos = []
+    
+    for(let repo of data.repositories){
+        repo.primaryLanguageId = "none"
+        repo.readmeUrl = await parseUrlReadme(repo.name, repo.owner.login)
+        const lang = repo.primaryLanguage
+        const owner = repo.owner
+        if((lang !== undefined) && (lang !== null)){
+            let langExist: boolean = langs.some(l => l.id === lang.id)
+            if(langExist === false) langs.push(lang)
+            repo.primaryLanguageId = lang.id
+        }
+        if((owner !== undefined) && (owner !== null)){
+            let ownerExist: boolean = owners.some(l => l.id === owner.id)
+            if(ownerExist === false) owners.push(owner)
+            repo.ownerId = owner.id
+        }
+        delete repo.owner
+        delete repo.primaryLanguage
+        repos.push(repo)
+    }
+    const users = arrayPlain(owners)
+    const repositories = arrayPlain(repos)
+    const languages = arrayPlain(langs)
+
+    return {admin, users, languages, repositories, topics, topicsXrepo, licenses}
+}
+
+function arrayPlain(arr){
+    const data = []
+    arr.forEach((item) => {
+        let exists = data.some(it => it.id === item.id)
+        if(exists === false){
+            let str = plainObject(item)
+            data.push(str)
+        }
+    })
+
+    return data.join(', ')
+}
+
+function plainObject(obj): string {
+    let str = '('
+    for(let key in obj) {
+        let value = obj[key]
+        if((typeof value) === 'string'){
+            str += `${key}:'${value}',`
+        } else {
+            str += `${key}:${value},`
+        }
+    }
+    str +=')'
+
+    return str
+}
+
+async function parseUrlReadme(reponame:string, ownername:string):Promise<string>{
+    const req = await fetch(`https://api.github.com/${reponame}/${ownername}`)
+    const url = await req.json().download_url
+    return url
+}

@@ -1,0 +1,1 @@
+INSERT INTO admin VALUES undefined;INSERT INTO owner VALUES undefined;INSERT INTO language VALUES undefined;INSERT INTO repository VALUES undefined;INSERT INTO licenses VALUES undefined;
