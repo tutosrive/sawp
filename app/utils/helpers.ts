@@ -33,6 +33,7 @@ export default class Helpers{
     static getLicenses(data){
         const licenses = []
         data.repositories.forEach(repo => {
+            repo.licenseId = null
             const licenseInfo = repo.licenseInfo
             if((licenseInfo !== undefined) && (licenseInfo !== null)){
                 repo.licenseId = licenseInfo.id

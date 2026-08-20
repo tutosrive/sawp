@@ -1,7 +1,8 @@
 import {writeFile} from 'node:fs/promises'
+import GithubService from '../github/service.ts'
 
-export default function createInsertQuery(data){
-    const {admin, users, languages, repositories, topics, topicsXrepo, licenses} = parseData(data)
+export default async function createInsertQuery(data){
+    const {admin, users, languages, repositories, topics, topicsXrepo, licenses} = await parseData(data)
     const tables = [
         {name: 'admin', data: admin},
         {name: 'owner', data: users},
@@ -10,7 +11,7 @@ export default function createInsertQuery(data){
         {name: 'licenses', data: licenses}
     ]
     let query = ''
-    tables.forEach(table => {query += `INSERT INTO ${table.name} VALUES ${table.data};`})
+    tables.forEach(table => {query += `INSERT INTO ${table.name} VALUES ${table.data};\n`})
     const write = async ()=> {await writeFile('app/test.txt', query, 'utf8')}
     write()
     return query.replaceAll(',)', ')')
@@ -49,7 +50,7 @@ async function parseData(data){
     const users = arrayPlain(owners)
     const repositories = arrayPlain(repos)
     const languages = arrayPlain(langs)
-
+    
     return {admin, users, languages, repositories, topics, topicsXrepo, licenses}
 }
 
@@ -82,7 +83,12 @@ function plainObject(obj): string {
 }
 
 async function parseUrlReadme(reponame:string, ownername:string):Promise<string>{
-    const req = await fetch(`https://api.github.com/${reponame}/${ownername}`)
-    const url = await req.json().download_url
-    return url
+    const req = await fetch(`https://api.github.com/repos/${reponame}/${ownername}/readme`,{
+        headers: {'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`}
+    })
+    const url = await req.json()
+    const rawUrl = url.download_url ?? null
+   // const sv = new GithubService()
+    //const url = await sv.getReadmeData()
+    return rawUrl
 }
