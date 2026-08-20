@@ -6,16 +6,15 @@ export default class DB{
     private client
     private timeout
 
-    constructor(){
+    constructor(callbackAfterTables){
         this.URL = process.env.DB_CONNECTION_URL
         this.getClient()
-        this.createTables()
     }
 
-    private async createTables(){
+    async createTables(callback){
         const tables = await readFile('app/database/tables.sql', 'utf8')
         const req = async () => {
-            await this.client.query(tables)
+            await this.client.query(tables, (err, res) => {callback(err, res)})
         }
         this.handleExecuteTimeout(req, 5000)
     }
@@ -28,10 +27,12 @@ export default class DB{
         let tmot = setTimeout(()=>{callback(); tmot = null}, time)
     }
 
-    async addData(query){
+    async runQuery(query, callback){
         const req = async () => {
             const q = {text: query}
-            await this.client.query(q)
+            await this.client.query(q, (err, res) => {
+                callback(err, res)
+            })
         }
         this.runCallback(req, 5000)
     }
