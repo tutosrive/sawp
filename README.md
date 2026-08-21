@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 > Supabase on FREE plan pause your project if don't get requests for 7 days or more,
-> So, you can try still alive it with a Cron Job, sending requests to your supabase `"http link" + "/auth/v1/health"` with this cron expresion "0 0 */6 * *"
+> So, you can try still alive it with a Cron Job, sending requests to your supabase `"http link" + "/auth/v1/health"` with this cron expresion "0 0 */5 * *"
 
 Requirements:
     1. Create a [Supabase](https://supabase.com) account (can be 100% FREE)
