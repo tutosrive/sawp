@@ -96,7 +96,5 @@ async function parseUrlReadme(reponame:string, ownername:string):Promise<string>
     })
     const url = await req.json()
     const rawUrl = url.download_url ?? null
-   // const sv = new GithubService()
-    //const url = await sv.getReadmeData()
     return rawUrl
 }

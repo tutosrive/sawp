@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS owner CASCADE;
 DROP TABLE IF EXISTS admin CASCADE;
 DROP TABLE IF EXISTS language CASCADE;
 DROP TABLE IF EXISTS repository CASCADE;
-DROP TABLE IF EXISTS topics CASCADE;
+DROP TABLE IF EXISTS topic CASCADE;
 DROP TABLE IF EXISTS topicXrepository CASCADE;
 DROP TABLE IF EXISTS license CASCADE;
 
@@ -28,11 +28,11 @@ location TEXT,
 login TEXT NOT NULL UNIQUE,
 name TEXT,
 url TEXT NOT NULL UNIQUE,
-website_url TEXT);
+website_url TEXT,
+stargazerCount INTEGER NOT NULL DEFAULT 0);
 /**
 @table: admin
 @description: User admin owner of stargazers ... 
-@columnsDescription:  id() bio(The user bio) avatar_url(Profile photo url) company() created_at(Date when user was created) email() location() login(Username used to "login" ) name(Name for public) url() website_url()
 */
 
 CREATE TABLE language (
@@ -64,12 +64,12 @@ primary_language_id TEXT,
 owner_id TEXT NOT NULL,
 owner_starred_id TEXT NOT NULL);
 
-CREATE TABLE topics (
+CREATE TABLE topic (
 id TEXT PRIMARY KEY NOT NULL,
 name TEXT NOT NULL UNIQUE,
 stargazer_count INTEGER NOT NULL DEFAULT 0);
 /**
-@table: topics
+@table: topic
 @description: Repositories Tags
 */
 
@@ -95,4 +95,4 @@ ALTER TABLE repository ADD CONSTRAINT repository_primary_language_id_language_id
 ALTER TABLE repository ADD CONSTRAINT repository_owner_id_owner_id FOREIGN KEY (owner_id) REFERENCES owner(id) ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE repository ADD CONSTRAINT repository_owner_starred_id_admin_id FOREIGN KEY (owner_starred_id) REFERENCES admin(id) ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE topicXrepository ADD CONSTRAINT topicXrepository_idRepo_repository_id FOREIGN KEY (idRepo) REFERENCES repository(id) ON DELETE SET NULL ON UPDATE CASCADE;
-ALTER TABLE topicXrepository ADD CONSTRAINT topicXrepository_idTopic_topics_id FOREIGN KEY (idTopic) REFERENCES topics(id) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE topicXrepository ADD CONSTRAINT topicXrepository_idTopic_topic_id FOREIGN KEY (idTopic) REFERENCES topic(id) ON DELETE SET NULL ON UPDATE CASCADE;
