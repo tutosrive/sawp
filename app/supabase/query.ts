@@ -1,4 +1,3 @@
-import {writeFile} from 'node:fs/promises'
 import GithubService from '../github/service.ts'
 
 export default async function createInsertQuery(data:any, isFirst?: boolean = false): Promise<string> {
@@ -19,8 +18,6 @@ export default async function createInsertQuery(data:any, isFirst?: boolean = fa
         }
     })
     query = query.replaceAll(',)', ')')
-    const write = async ()=> {await writeFile('app/queries.sql', query, 'utf8')}
-    write()
     return query
 }
 
@@ -73,35 +70,15 @@ function getCountByTopic(topics: Array<any>, relation: Array<any>){
 function arrayPlain(arr: Array<any>, unique?: boolean = true){
     const data:Array<any> = []
     const strData = []
-    const test = []
     arr.forEach((item) => {
         let exists = unique === false ? false : data.some((it, i, a) => it.id == item.id)
         if(exists === false){
             data.push(item)
             let str = plainObject(item)
-            test.push(plainObjectT(item))
             strData.push(str)
         }
     })
-    const write = async()=>{
-        await writeFile(`app/data/data-json-${data[0].id}.json`, JSON.stringify(data, null, 4))
-        await writeFile(`app/data/data-array-${data[0].id}.json`, JSON.stringify(test, null, 4))
-    }
-    write()
     return strData.join(', ')
-}
-
-function plainObjectT(obj){
-    const a = []
-    for(let key in obj) {
-        let value = obj[key] ?? null
-        if((typeof value) === 'string'){
-            a.push(`$$${key}: ${value}$$,`)
-            continue
-        }
-        a.push(`${key}: ${value},`)
-    }
-    return a
 }
 
 function plainObject(obj:any): string {
@@ -119,11 +96,6 @@ function plainObject(obj:any): string {
 }
 
 async function parseUrlReadme(reponame:string, ownername:string, branch:string): string {
-    //const req = await fetch(`https://api.github.com/repos/${reponame}/${ownername}/readme`,{
-    //    headers: {'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`}
-    //})
-    //const url = await req.json()
-    //const rawUrl = url.download_url ?? null
     const rawUrl = `https://raw.githubusercontent.com/${ownername}/${reponame}/${branch}/README.md`
     return rawUrl
 }

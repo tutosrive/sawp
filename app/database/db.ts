@@ -14,7 +14,6 @@ export default class DB{
     async createTables(callback? = null){
         const tables = await readFile('app/database/tables.sql', 'utf8')
         const req = async () => {
-            //await this.client.query(tables, (err, res) => {callback(err, res)})
             this.runQuery('Creating Database Tables', tables, callback)
         }
         this.handleExecuteTimeout(req, 5000)
