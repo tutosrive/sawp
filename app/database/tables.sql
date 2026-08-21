@@ -84,7 +84,7 @@ idTopic TEXT NOT NULL);
 CREATE TABLE license (
 id TEXT PRIMARY KEY NOT NULL,
 name TEXT NOT NULL UNIQUE,
-url INTEGER NOT NULL UNIQUE);
+url TEXT NOT NULL UNIQUE);
 /**
 @table: license
 @columnsDescription:  id() name() url()
