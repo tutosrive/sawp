@@ -18,8 +18,6 @@ export default async function createInsertQuery(data){
 }
 
 async function parseData(data){
-    data.user.stargazerCount = data.repositories.stargazerCount
-    delete data.repositories.stargazerCount
     const admin = plainObject(data.user)
     let topics = arrayPlain(data.reposTopics)
     let topicsXrepo = arrayPlain(data.topicsXrepo)
@@ -29,9 +27,8 @@ async function parseData(data){
     let repos = []
     
     for(let repo of data.repositories){
-        repo.primaryLanguageId = "none"
         repo.readmeUrl = await parseUrlReadme(repo.name, repo.owner.login)
-        const lang = repo.primaryLanguage
+        const lang = repo.primaryLanguage ?? null
         const owner = repo.owner
         if((lang !== undefined) && (lang !== null)){
             let langExist: boolean = langs.some(l => l.id === lang.id)
@@ -43,6 +40,7 @@ async function parseData(data){
             if(ownerExist === false) owners.push(owner)
             repo.ownerId = owner.id
         }
+        repo.ownerStarredId = data.user.id
         delete repo.owner
         delete repo.primaryLanguage
         repos.push(repo)

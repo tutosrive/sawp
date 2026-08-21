@@ -19,6 +19,7 @@ export default class GithubService {
     }
 
     private parseData(data){
+        data.user.stargazerCount = data.user.starredRepositories.totalCount
         data.repositories = data.user.starredRepositories.nodes
         delete data.user.starredRepositories
         const {topics, topicsXrepo} = Helpers.getTopics(data.repositories)
