@@ -35,7 +35,9 @@ async function parseData(data: any){
     let repos = []
     
     for(let repo of data.repositories){
-        repo.readmeUrl = await parseUrlReadme(repo.name, repo.owner.login)
+        const defaultBranchName = repo.defaultBranchRef.name
+        delete repo.defaultBranchRef
+        repo.readmeUrl = await parseUrlReadme(repo.name, repo.owner.login, defaultBranchName)
         const lang = repo.primaryLanguage ?? null
         repo.primaryLanguageId = null
         const owner = repo.owner
@@ -116,11 +118,12 @@ function plainObject(obj:any): string {
     return str
 }
 
-async function parseUrlReadme(reponame:string, ownername:string):Promise<string>{
-    const req = await fetch(`https://api.github.com/repos/${reponame}/${ownername}/readme`,{
-        headers: {'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`}
-    })
-    const url = await req.json()
-    const rawUrl = url.download_url ?? null
+async function parseUrlReadme(reponame:string, ownername:string, branch:string): string {
+    //const req = await fetch(`https://api.github.com/repos/${reponame}/${ownername}/readme`,{
+    //    headers: {'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`}
+    //})
+    //const url = await req.json()
+    //const rawUrl = url.download_url ?? null
+    const rawUrl = `https://raw.githubusercontent.com/${ownername}/${reponame}/${branch}/README.md`
     return rawUrl
 }

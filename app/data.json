@@ -38,6 +38,9 @@
                 "login": "felipebuitragocarmona",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/66322705?u=1bc42437e59831aec48ece05d89b0a192b203929&v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": null
         },
         {
@@ -64,6 +67,9 @@
                 "login": "electron",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/13409222?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -71,13 +77,13 @@
             "createdAt": "2016-03-20T23:49:42Z",
             "description": "A collective list of free APIs",
             "diskUsage": 7911,
-            "forkCount": 51609,
+            "forkCount": 51627,
             "homepageUrl": "https://APILayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo",
             "isArchived": false,
             "name": "public-apis",
             "pushedAt": "2026-08-19T21:44:19Z",
             "sshUrl": "git@github.com:public-apis/public-apis.git",
-            "stargazerCount": 467841,
+            "stargazerCount": 467929,
             "url": "https://github.com/public-apis/public-apis",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -90,6 +96,9 @@
                 "login": "public-apis",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/51121562?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -97,13 +106,13 @@
             "createdAt": "2020-12-19T19:19:34Z",
             "description": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
             "diskUsage": 4204,
-            "forkCount": 1665,
+            "forkCount": 1664,
             "homepageUrl": "https://libretranslate.com",
             "isArchived": false,
             "name": "LibreTranslate",
             "pushedAt": "2026-08-10T18:51:28Z",
             "sshUrl": "git@github.com:LibreTranslate/LibreTranslate.git",
-            "stargazerCount": 16080,
+            "stargazerCount": 16082,
             "url": "https://github.com/LibreTranslate/LibreTranslate",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -116,6 +125,9 @@
                 "login": "LibreTranslate",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/77352747?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTE="
         },
         {
@@ -123,13 +135,13 @@
             "createdAt": "2020-01-05T20:34:00Z",
             "description": "A curated list of free public APIs — searchable, community-maintained, with a free JSON API.",
             "diskUsage": 4093,
-            "forkCount": 1691,
+            "forkCount": 1692,
             "homepageUrl": "https://public-api-lists.github.io/public-api-lists/",
             "isArchived": false,
             "name": "public-api-lists",
             "pushedAt": "2026-08-01T11:25:46Z",
             "sshUrl": "git@github.com:public-api-lists/public-api-lists.git",
-            "stargazerCount": 15557,
+            "stargazerCount": 15560,
             "url": "https://github.com/public-api-lists/public-api-lists",
             "primaryLanguage": null,
             "owner": {
@@ -137,6 +149,9 @@
                 "url": "https://github.com/public-api-lists",
                 "login": "public-api-lists",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/59540994?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -164,6 +179,9 @@
                 "login": "aunyks",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/15711233?u=64fc10d0c573f8fc1383e371af2b8d218aeed1e7&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
@@ -185,6 +203,9 @@
                 "url": "https://github.com/proyecto26",
                 "login": "proyecto26",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/28855608?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         },
@@ -212,6 +233,9 @@
                 "login": "Elanis",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/7013446?u=75e7270c5fc31843fe4d0fbe543382917ab080cb&v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -237,6 +261,9 @@
                 "url": "https://github.com/nodegui",
                 "login": "nodegui",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/51644128?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -264,6 +291,9 @@
                 "login": "browserify",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6320506?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -289,6 +319,9 @@
                 "url": "https://github.com/ellisonleao",
                 "login": "ellisonleao",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/178641?u=c0542e6a04ad854825120dc83974f2ee58edaf97&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -316,6 +349,9 @@
                 "login": "budnix",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/571316?u=20e56a738a90be0f370dcd226731ca67f22efd08&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -341,6 +377,9 @@
                 "url": "https://github.com/limonte",
                 "login": "limonte",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6059356?u=275142f6f3e614bdc263f9332c3743e5d389a90b&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "gh-pages"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -368,6 +407,9 @@
                 "login": "balajmarius",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/5159921?u=850cf1e05ecdfa182a7e8a23dbe40f4944415635&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -394,6 +436,9 @@
                 "login": "hyperdiv",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/123991817?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTI="
         },
         {
@@ -407,7 +452,7 @@
             "name": "neutralinojs",
             "pushedAt": "2026-08-21T01:25:25Z",
             "sshUrl": "git@github.com:neutralinojs/neutralinojs.git",
-            "stargazerCount": 8611,
+            "stargazerCount": 8612,
             "url": "https://github.com/neutralinojs/neutralinojs",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDk=",
@@ -419,6 +464,9 @@
                 "url": "https://github.com/neutralinojs",
                 "login": "neutralinojs",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/36976817?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -433,7 +481,7 @@
             "name": "wails",
             "pushedAt": "2026-08-21T15:12:18Z",
             "sshUrl": "git@github.com:wailsapp/wails.git",
-            "stargazerCount": 35914,
+            "stargazerCount": 35916,
             "url": "https://github.com/wailsapp/wails",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxOTA=",
@@ -446,20 +494,23 @@
                 "login": "wailsapp",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/39746503?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
             "id": "MDEwOlJlcG9zaXRvcnkxNTYzNDk4MQ==",
             "createdAt": "2014-01-04T16:05:36Z",
             "description": "Godot Engine – Multi-platform 2D and 3D game engine",
-            "diskUsage": 1879752,
-            "forkCount": 26426,
+            "diskUsage": 1879779,
+            "forkCount": 26429,
             "homepageUrl": "https://godotengine.org",
             "isArchived": false,
             "name": "godot",
-            "pushedAt": "2026-08-21T17:37:15Z",
+            "pushedAt": "2026-08-21T21:08:08Z",
             "sshUrl": "git@github.com:godotengine/godot.git",
-            "stargazerCount": 115963,
+            "stargazerCount": 115960,
             "url": "https://github.com/godotengine/godot",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDI=",
@@ -472,20 +523,23 @@
                 "login": "godotengine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6318500?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
             "id": "R_kgDOMSqWwQ",
             "createdAt": "2024-07-06T07:28:10Z",
             "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
-            "diskUsage": 549860,
+            "diskUsage": 550088,
             "forkCount": 7179,
             "homepageUrl": "https://cline.bot",
             "isArchived": false,
             "name": "cline",
-            "pushedAt": "2026-08-21T17:47:41Z",
+            "pushedAt": "2026-08-21T21:30:25Z",
             "sshUrl": "git@github.com:cline/cline.git",
-            "stargazerCount": 66608,
+            "stargazerCount": 66614,
             "url": "https://github.com/cline/cline",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UyODc=",
@@ -498,6 +552,9 @@
                 "login": "cline",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/184127137?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTI="
         },
         {
@@ -505,13 +562,13 @@
             "createdAt": "2018-05-09T12:03:18Z",
             "description": "Master programming by recreating your favorite technologies from scratch.",
             "diskUsage": 1086,
-            "forkCount": 51104,
+            "forkCount": 51108,
             "homepageUrl": "https://codecrafters.io",
             "isArchived": false,
             "name": "build-your-own-x",
             "pushedAt": "2026-07-14T19:25:58Z",
             "sshUrl": "git@github.com:codecrafters-io/build-your-own-x.git",
-            "stargazerCount": 541821,
+            "stargazerCount": 541861,
             "url": "https://github.com/codecrafters-io/build-your-own-x",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UzMTM=",
@@ -524,6 +581,9 @@
                 "login": "codecrafters-io",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/58904235?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
@@ -531,13 +591,13 @@
             "createdAt": "2014-06-27T21:00:06Z",
             "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
             "diskUsage": 6067,
-            "forkCount": 28549,
+            "forkCount": 28556,
             "homepageUrl": "https://awesome-python.com/",
             "isArchived": false,
             "name": "awesome-python",
             "pushedAt": "2026-08-21T14:25:23Z",
             "sshUrl": "git@github.com:vinta/awesome-python.git",
-            "stargazerCount": 315293,
+            "stargazerCount": 315326,
             "url": "https://github.com/vinta/awesome-python",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -550,6 +610,9 @@
                 "login": "vinta",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/652070?u=25dca0371a54b997c61ed58fcdd2398d4958d1f3&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTA="
         },
         {
@@ -557,13 +620,13 @@
             "createdAt": "2015-10-24T19:53:36Z",
             "description": "A list of awesome beginners-friendly projects.",
             "diskUsage": 952,
-            "forkCount": 7976,
+            "forkCount": 7975,
             "homepageUrl": "",
             "isArchived": false,
             "name": "awesome-for-beginners",
             "pushedAt": "2026-07-25T07:00:20Z",
             "sshUrl": "git@github.com:MunGell/awesome-for-beginners.git",
-            "stargazerCount": 88588,
+            "stargazerCount": 88595,
             "url": "https://github.com/MunGell/awesome-for-beginners",
             "primaryLanguage": null,
             "owner": {
@@ -571,6 +634,9 @@
                 "url": "https://github.com/MunGell",
                 "login": "MunGell",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/812976?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": null
         },
@@ -585,7 +651,7 @@
             "name": "Awesome-Design-Tools",
             "pushedAt": "2024-07-28T19:57:31Z",
             "sshUrl": "git@github.com:goabstract/Awesome-Design-Tools.git",
-            "stargazerCount": 40952,
+            "stargazerCount": 40953,
             "url": "https://github.com/goabstract/Awesome-Design-Tools",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -597,6 +663,9 @@
                 "url": "https://github.com/goabstract",
                 "login": "goabstract",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/18014107?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -624,6 +693,9 @@
                 "login": "hoffstadt",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/39973752?u=560a2145022dcbadf19ddaa6345b2d03cc2c6115&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -650,6 +722,9 @@
                 "login": "PilotLightTech",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/166862423?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -663,7 +738,7 @@
             "name": "FlaxEngine",
             "pushedAt": "2026-08-18T10:11:27Z",
             "sshUrl": "git@github.com:FlaxEngine/FlaxEngine.git",
-            "stargazerCount": 6973,
+            "stargazerCount": 6975,
             "url": "https://github.com/FlaxEngine/FlaxEngine",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDI=",
@@ -675,6 +750,9 @@
                 "url": "https://github.com/FlaxEngine",
                 "login": "FlaxEngine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/26741064?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -702,6 +780,9 @@
                 "login": "kagisearch",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/92134518?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -728,6 +809,9 @@
                 "login": "UPBGE",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/16006310?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTA="
         },
         {
@@ -741,7 +825,7 @@
             "name": "Fyrox",
             "pushedAt": "2026-08-20T16:12:30Z",
             "sshUrl": "git@github.com:FyroxEngine/Fyrox.git",
-            "stargazerCount": 9514,
+            "stargazerCount": 9515,
             "url": "https://github.com/FyroxEngine/Fyrox",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UyNDk=",
@@ -753,6 +837,9 @@
                 "url": "https://github.com/FyroxEngine",
                 "login": "FyroxEngine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/83981865?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -780,6 +867,9 @@
                 "login": "jMonkeyEngine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1562906?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTU="
         },
         {
@@ -805,6 +895,9 @@
                 "url": "https://github.com/multi-os-engine",
                 "login": "multi-os-engine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/17782668?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "moe-master"
             },
             "licenseId": "MDc6TGljZW5zZTI="
         },
@@ -832,6 +925,9 @@
                 "login": "galacean",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/72598982?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -857,6 +953,9 @@
                 "url": "https://github.com/sourcesounds",
                 "login": "sourcesounds",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/53062259?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -884,6 +983,9 @@
                 "login": "sourcesounds",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/53062259?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
@@ -909,6 +1011,9 @@
                 "url": "https://github.com/sourcesounds",
                 "login": "sourcesounds",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/53062259?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -936,6 +1041,9 @@
                 "login": "sourcesounds",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/53062259?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
@@ -961,6 +1069,9 @@
                 "url": "https://github.com/sourcesounds",
                 "login": "sourcesounds",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/53062259?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -988,6 +1099,9 @@
                 "login": "sourcesounds",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/53062259?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
@@ -1013,6 +1127,9 @@
                 "url": "https://github.com/thunder-engine",
                 "login": "thunder-engine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/71488699?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTI="
         },
@@ -1040,6 +1157,9 @@
                 "login": "cocos",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6937061?v=4"
             },
+            "defaultBranchRef": {
+                "name": "v3.8.9"
+            },
             "licenseId": "MDc6TGljZW5zZTA="
         },
         {
@@ -1065,6 +1185,9 @@
                 "url": "https://github.com/TorqueGameEngines",
                 "login": "TorqueGameEngines",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/22003422?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "development"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -1092,6 +1215,9 @@
                 "login": "pilas-engine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/18339468?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEy"
         },
         {
@@ -1117,6 +1243,9 @@
                 "url": "https://github.com/npc-engine",
                 "login": "npc-engine",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/89022829?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1144,6 +1273,9 @@
                 "login": "godotjs",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/182270891?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1157,7 +1289,7 @@
             "name": "mypaint",
             "pushedAt": "2026-06-16T09:10:40Z",
             "sshUrl": "git@github.com:mypaint/mypaint.git",
-            "stargazerCount": 2962,
+            "stargazerCount": 2963,
             "url": "https://github.com/mypaint/mypaint",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -1169,6 +1301,9 @@
                 "url": "https://github.com/mypaint",
                 "login": "mypaint",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/7860709?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTg="
         },
@@ -1191,6 +1326,9 @@
                 "url": "https://github.com/GodotSteam",
                 "login": "GodotSteam",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/161879105?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -1218,6 +1356,9 @@
                 "login": "CodeEngineOrg",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/54474697?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1244,6 +1385,9 @@
                 "login": "craftyjs",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1334729?v=4"
             },
+            "defaultBranchRef": {
+                "name": "develop"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1257,7 +1401,7 @@
             "name": "pyxel",
             "pushedAt": "2026-08-12T07:32:03Z",
             "sshUrl": "git@github.com:kitao/pyxel.git",
-            "stargazerCount": 17677,
+            "stargazerCount": 17678,
             "url": "https://github.com/kitao/pyxel",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UyNDk=",
@@ -1269,6 +1413,9 @@
                 "url": "https://github.com/kitao",
                 "login": "kitao",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/678802?u=9d101a9b90e75057b9b0e08d805169c6f7255fec&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -1291,6 +1438,9 @@
                 "url": "https://github.com/leereilly",
                 "login": "leereilly",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/121322?u=1cbb6ecd532b5599d7629816482320967c4e8825&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -1318,6 +1468,9 @@
                 "login": "cykod",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/130561?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTg="
         },
         {
@@ -1343,6 +1496,9 @@
                 "url": "https://github.com/phoboslab",
                 "login": "phoboslab",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/443987?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1370,6 +1526,9 @@
                 "login": "max-mapper",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/39759?u=9d5a9325a609753d5dc4a742e31f8a38fd67214b&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTU="
         },
         {
@@ -1395,6 +1554,9 @@
                 "url": "https://github.com/melonjs",
                 "login": "melonjs",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/579995?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1422,6 +1584,9 @@
                 "login": "DaVikingCode",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/7765875?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTA="
         },
         {
@@ -1447,6 +1612,9 @@
                 "url": "https://github.com/turbulenz",
                 "login": "turbulenz",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/327642?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1474,20 +1642,23 @@
                 "login": "ekelokorpi",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1164289?u=1d14b8af97ba5795264df0e939711b5d06c50f9d&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
             "id": "MDEwOlJlcG9zaXRvcnkyMTMzMTA5MA==",
             "createdAt": "2014-06-29T19:58:38Z",
             "description": "🎮 Open-source, cross-platform 2D/3D/multiplayer game engine designed for everyone.",
-            "diskUsage": 1899511,
+            "diskUsage": 1899528,
             "forkCount": 1511,
             "homepageUrl": "https://gdevelop.io",
             "isArchived": false,
             "name": "GDevelop",
             "pushedAt": "2026-08-21T17:35:36Z",
             "sshUrl": "git@github.com:4ian/GDevelop.git",
-            "stargazerCount": 25824,
+            "stargazerCount": 25827,
             "url": "https://github.com/4ian/GDevelop",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -1499,6 +1670,9 @@
                 "url": "https://github.com/4ian",
                 "login": "4ian",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1280130?u=18f856cccd8f77b611b17865cd8562165c49eeab&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -1526,6 +1700,9 @@
                 "login": "flet-dev",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/102273996?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTI="
         },
         {
@@ -1533,13 +1710,13 @@
             "createdAt": "2010-04-06T11:11:59Z",
             "description": "The Python micro framework for building web applications.",
             "diskUsage": 12368,
-            "forkCount": 16943,
+            "forkCount": 16944,
             "homepageUrl": "https://flask.palletsprojects.com",
             "isArchived": false,
             "name": "flask",
             "pushedAt": "2026-08-16T18:35:35Z",
             "sshUrl": "git@github.com:pallets/flask.git",
-            "stargazerCount": 72138,
+            "stargazerCount": 72131,
             "url": "https://github.com/pallets/flask",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -1552,6 +1729,9 @@
                 "login": "pallets",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/16748505?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTU="
         },
         {
@@ -1559,13 +1739,13 @@
             "createdAt": "2012-04-28T02:47:18Z",
             "description": "The Web framework for perfectionists with deadlines.",
             "diskUsage": 282140,
-            "forkCount": 34148,
+            "forkCount": 34151,
             "homepageUrl": "https://www.djangoproject.com/",
             "isArchived": false,
             "name": "django",
             "pushedAt": "2026-08-21T12:34:31Z",
             "sshUrl": "git@github.com:django/django.git",
-            "stargazerCount": 88624,
+            "stargazerCount": 88588,
             "url": "https://github.com/django/django",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -1578,6 +1758,9 @@
                 "login": "django",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/27804?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTU="
         },
         {
@@ -1585,13 +1768,13 @@
             "createdAt": "2024-11-13T19:56:40Z",
             "description": "Python tool for converting files and office documents to Markdown.",
             "diskUsage": 4329,
-            "forkCount": 12807,
+            "forkCount": 12811,
             "homepageUrl": "",
             "isArchived": false,
             "name": "markitdown",
             "pushedAt": "2026-08-19T19:36:22Z",
             "sshUrl": "git@github.com:microsoft/markitdown.git",
-            "stargazerCount": 175200,
+            "stargazerCount": 175244,
             "url": "https://github.com/microsoft/markitdown",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -1604,6 +1787,9 @@
                 "login": "microsoft",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1611,13 +1797,13 @@
             "createdAt": "2013-05-24T16:15:54Z",
             "description": "The library for web and native user interfaces.",
             "diskUsage": 1067414,
-            "forkCount": 51246,
+            "forkCount": 51244,
             "homepageUrl": "https://react.dev",
             "isArchived": false,
             "name": "react",
-            "pushedAt": "2026-08-21T14:28:18Z",
+            "pushedAt": "2026-08-21T21:26:26Z",
             "sshUrl": "org-102812@github.com:react/react.git",
-            "stargazerCount": 247534,
+            "stargazerCount": 247493,
             "url": "https://github.com/react/react",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDA=",
@@ -1629,6 +1815,9 @@
                 "url": "https://github.com/react",
                 "login": "react",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/102812?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1656,6 +1845,9 @@
                 "login": "typescript-cheatsheets",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/50188264?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1682,20 +1874,23 @@
                 "login": "UN-GCPDS",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/63690647?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTQ="
         },
         {
             "id": "MDEwOlJlcG9zaXRvcnkyNDE5NTMzOQ==",
             "createdAt": "2014-09-18T16:12:01Z",
             "description": "Deliver web apps with confidence 🚀",
-            "diskUsage": 654927,
-            "forkCount": 27437,
+            "diskUsage": 654778,
+            "forkCount": 27436,
             "homepageUrl": "https://angular.dev",
             "isArchived": false,
             "name": "angular",
-            "pushedAt": "2026-08-19T20:48:22Z",
+            "pushedAt": "2026-08-21T19:36:56Z",
             "sshUrl": "git@github.com:angular/angular.git",
-            "stargazerCount": 101005,
+            "stargazerCount": 101002,
             "url": "https://github.com/angular/angular",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UyODc=",
@@ -1708,13 +1903,16 @@
                 "login": "angular",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/139426?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
             "id": "R_kgDOG4UjmQ",
             "createdAt": "2022-02-21T04:55:20Z",
             "description": "An open source platform for Python in the browser. https://pyscript.net Docs: https://docs.pyscript.net/ Try it: https://pyscript.com/ Community: https://discord.gg/HxvBtukrg2",
-            "diskUsage": 18672,
+            "diskUsage": 18674,
             "forkCount": 1473,
             "homepageUrl": "https://pyscript.net/",
             "isArchived": false,
@@ -1733,6 +1931,9 @@
                 "url": "https://github.com/pyscript",
                 "login": "pyscript",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/100553281?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTI="
         },
@@ -1760,6 +1961,9 @@
                 "login": "ArtifexSoftware",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/13031723?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1785,6 +1989,9 @@
                 "url": "https://github.com/showdownjs",
                 "login": "showdownjs",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/2754978?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1812,6 +2019,9 @@
                 "login": "midudev",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1561955?u=477b20a15a2e2361e07e5e414a560e6bff35e811&v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1838,6 +2048,9 @@
                 "login": "lite-xl",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/85096704?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1851,7 +2064,7 @@
             "name": "app-ideas",
             "pushedAt": "2025-10-11T14:51:21Z",
             "sshUrl": "git@github.com:florinpop17/app-ideas.git",
-            "stargazerCount": 96978,
+            "stargazerCount": 96984,
             "url": "https://github.com/florinpop17/app-ideas",
             "primaryLanguage": null,
             "owner": {
@@ -1859,6 +2072,9 @@
                 "url": "https://github.com/florinpop17",
                 "login": "florinpop17",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6692364?u=b405a7894d53c9384aa966092115ad6dcc47f2c7&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1886,6 +2102,9 @@
                 "login": "MjavadH",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/60067988?u=e56a08f95f1525f9ffe1e0dde0ee16dc8c9f3b89&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -1893,13 +2112,13 @@
             "createdAt": "2020-09-28T15:36:08Z",
             "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
             "diskUsage": 78046,
-            "forkCount": 18596,
+            "forkCount": 18597,
             "homepageUrl": "https://rustdesk.com",
             "isArchived": false,
             "name": "rustdesk",
             "pushedAt": "2026-08-21T16:28:12Z",
             "sshUrl": "git@github.com:rustdesk/rustdesk.git",
-            "stargazerCount": 121427,
+            "stargazerCount": 121435,
             "url": "https://github.com/rustdesk/rustdesk",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UyNDk=",
@@ -1912,18 +2131,21 @@
                 "login": "rustdesk",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/71636191?u=fcdfa5bbe724bd4ec02f6c3b2419ff25b7f5eb07&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTE="
         },
         {
             "id": "MDEwOlJlcG9zaXRvcnkxODc5MTY0MzA=",
             "createdAt": "2019-05-21T21:31:57Z",
             "description": "📊 A minimalist, self-hosted WakaTime-compatible backend for coding statistics",
-            "diskUsage": 9984,
+            "diskUsage": 9990,
             "forkCount": 295,
             "homepageUrl": "https://wakapi.dev",
             "isArchived": false,
             "name": "wakapi",
-            "pushedAt": "2026-08-21T12:23:15Z",
+            "pushedAt": "2026-08-21T18:59:14Z",
             "sshUrl": "git@github.com:muety/wakapi.git",
             "stargazerCount": 4408,
             "url": "https://github.com/muety/wakapi",
@@ -1937,6 +2159,9 @@
                 "url": "https://github.com/muety",
                 "login": "muety",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/8978843?u=54bca9811dc3ee7482b3c98ca98896be00ceecaf&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -1964,20 +2189,23 @@
                 "login": "r0x0r",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1549657?u=8124d7e7324b82e4b85233c1f5ac56a62166edbf&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTU="
         },
         {
             "id": "MDEwOlJlcG9zaXRvcnk0MTg4MTkwMA==",
             "createdAt": "2015-09-03T20:23:38Z",
             "description": "Visual Studio Code",
-            "diskUsage": 1373566,
+            "diskUsage": 1374357,
             "forkCount": 41747,
             "homepageUrl": "https://code.visualstudio.com",
             "isArchived": false,
             "name": "vscode",
-            "pushedAt": "2026-08-21T17:52:40Z",
+            "pushedAt": "2026-08-21T21:33:34Z",
             "sshUrl": "git@github.com:microsoft/vscode.git",
-            "stargazerCount": 189121,
+            "stargazerCount": 189120,
             "url": "https://github.com/microsoft/vscode",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UyODc=",
@@ -1989,6 +2217,9 @@
                 "url": "https://github.com/microsoft",
                 "login": "microsoft",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/6154722?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -2016,6 +2247,9 @@
                 "login": "poingstudios",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/60905266?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -2041,6 +2275,9 @@
                 "url": "https://github.com/google",
                 "login": "google",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1342004?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTI="
         },
@@ -2068,6 +2305,9 @@
                 "login": "download-directory",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/35223010?v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -2075,13 +2315,13 @@
             "createdAt": "2014-07-11T13:42:37Z",
             "description": "😎 Awesome lists about all kinds of interesting topics",
             "diskUsage": 1566,
-            "forkCount": 36513,
+            "forkCount": 36515,
             "homepageUrl": "",
             "isArchived": false,
             "name": "awesome",
             "pushedAt": "2026-08-21T12:39:13Z",
             "sshUrl": "git@github.com:sindresorhus/awesome.git",
-            "stargazerCount": 498570,
+            "stargazerCount": 498622,
             "url": "https://github.com/sindresorhus/awesome",
             "primaryLanguage": null,
             "owner": {
@@ -2089,6 +2329,9 @@
                 "url": "https://github.com/sindresorhus",
                 "login": "sindresorhus",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/170270?u=34acd557a042ac478d273a4621570cadb6b0bd89&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         },
@@ -2116,6 +2359,9 @@
                 "login": "paragonie",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/11591525?v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -2129,7 +2375,7 @@
             "name": "awesome-devsecops",
             "pushedAt": "2024-05-11T17:48:07Z",
             "sshUrl": "git@github.com:devsecops/awesome-devsecops.git",
-            "stargazerCount": 5457,
+            "stargazerCount": 5458,
             "url": "https://github.com/devsecops/awesome-devsecops",
             "primaryLanguage": null,
             "owner": {
@@ -2137,6 +2383,9 @@
                 "url": "https://github.com/devsecops",
                 "login": "devsecops",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/7269806?v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         },
@@ -2151,7 +2400,7 @@
             "name": "awesome-cyber-skills",
             "pushedAt": "2024-07-02T03:39:39Z",
             "sshUrl": "git@github.com:joe-shenouda/awesome-cyber-skills.git",
-            "stargazerCount": 4629,
+            "stargazerCount": 4630,
             "url": "https://github.com/joe-shenouda/awesome-cyber-skills",
             "primaryLanguage": null,
             "owner": {
@@ -2159,6 +2408,9 @@
                 "url": "https://github.com/joe-shenouda",
                 "login": "joe-shenouda",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/24913656?u=d5cd42f3d8d28b1480809597fedb1a8fe835acaf&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
@@ -2173,7 +2425,7 @@
             "name": "awesome-react",
             "pushedAt": "2026-08-20T07:58:12Z",
             "sshUrl": "git@github.com:enaqx/awesome-react.git",
-            "stargazerCount": 74356,
+            "stargazerCount": 74358,
             "url": "https://github.com/enaqx/awesome-react",
             "primaryLanguage": null,
             "owner": {
@@ -2182,6 +2434,9 @@
                 "login": "enaqx",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/182219?u=dd4dcbd3e20f4418b4390cc76415ff4d5ef6f5ab&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": null
         },
         {
@@ -2189,13 +2444,13 @@
             "createdAt": "2017-12-27T03:46:40Z",
             "description": "The Patterns of Scalable, Reliable, and Performant Large-Scale Systems",
             "diskUsage": 1607,
-            "forkCount": 7102,
+            "forkCount": 7104,
             "homepageUrl": "",
             "isArchived": false,
             "name": "awesome-scalability",
             "pushedAt": "2026-01-04T03:51:47Z",
             "sshUrl": "git@github.com:binhnguyennus/awesome-scalability.git",
-            "stargazerCount": 73440,
+            "stargazerCount": 73443,
             "url": "https://github.com/binhnguyennus/awesome-scalability",
             "primaryLanguage": null,
             "owner": {
@@ -2204,6 +2459,9 @@
                 "login": "binhnguyennus",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/15001306?u=0c586b1f01fe3301844cf3cd341b562bfd4d308c&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -2211,7 +2469,7 @@
             "createdAt": "2014-07-11T13:35:34Z",
             "description": ":zap: Delightful Node.js packages and resources [BECAUSE OF TOO MUCH SPAM AND LOW-QUALITY SUBMISSIONS, SUBMISSIONS ARE PAUSED UNTIL JULY]",
             "diskUsage": 1558,
-            "forkCount": 6227,
+            "forkCount": 6228,
             "homepageUrl": "https://node.cool",
             "isArchived": false,
             "name": "awesome-nodejs",
@@ -2226,6 +2484,9 @@
                 "login": "sindresorhus",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/170270?u=34acd557a042ac478d273a4621570cadb6b0bd89&v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTY="
         },
         {
@@ -2239,7 +2500,7 @@
             "name": "awesome-courses",
             "pushedAt": "2023-05-04T12:49:34Z",
             "sshUrl": "git@github.com:prakhar1989/awesome-courses.git",
-            "stargazerCount": 70569,
+            "stargazerCount": 70576,
             "url": "https://github.com/prakhar1989/awesome-courses",
             "primaryLanguage": null,
             "owner": {
@@ -2247,6 +2508,9 @@
                 "url": "https://github.com/prakhar1989",
                 "login": "prakhar1989",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/649249?u=96f77f0b3a0fb0d50682c7a31bf295e38ff64074&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -2261,7 +2525,7 @@
             "name": "awesome-react-components",
             "pushedAt": "2026-01-26T16:36:45Z",
             "sshUrl": "git@github.com:brillout/awesome-react-components.git",
-            "stargazerCount": 48240,
+            "stargazerCount": 48241,
             "url": "https://github.com/brillout/awesome-react-components",
             "primaryLanguage": null,
             "owner": {
@@ -2270,6 +2534,9 @@
                 "login": "brillout",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1005638?u=ab2e494458f2c4e810438e4250359146524b0376&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTY="
         },
         {
@@ -2277,7 +2544,7 @@
             "createdAt": "2014-07-09T10:12:43Z",
             "description": "A curated list of awesome frameworks, libraries and software for the Java programming language.",
             "diskUsage": 3497,
-            "forkCount": 7709,
+            "forkCount": 7710,
             "homepageUrl": "",
             "isArchived": false,
             "name": "awesome-java",
@@ -2292,6 +2559,9 @@
                 "login": "akullpp",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/4538351?u=e505b161676889a6042aac7381b3b9b2cc247820&v=4"
             },
+            "defaultBranchRef": {
+                "name": "main"
+            },
             "licenseId": "MDc6TGljZW5zZTI2"
         },
         {
@@ -2299,13 +2569,13 @@
             "createdAt": "2014-07-08T05:44:19Z",
             "description": "A curated list of awesome awesomeness",
             "diskUsage": 381,
-            "forkCount": 3601,
+            "forkCount": 3602,
             "homepageUrl": "",
             "isArchived": false,
             "name": "awesome-awesomeness",
             "pushedAt": "2024-06-02T22:46:41Z",
             "sshUrl": "git@github.com:bayandin/awesome-awesomeness.git",
-            "stargazerCount": 33614,
+            "stargazerCount": 33616,
             "url": "https://github.com/bayandin/awesome-awesomeness",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDE=",
@@ -2317,6 +2587,9 @@
                 "url": "https://github.com/bayandin",
                 "login": "bayandin",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/864213?u=bece5170441fbfed6963d934553abf048d0b14e1&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -2331,7 +2604,7 @@
             "name": "prompts.chat",
             "pushedAt": "2026-08-21T03:23:58Z",
             "sshUrl": "git@github.com:f/prompts.chat.git",
-            "stargazerCount": 167702,
+            "stargazerCount": 167711,
             "url": "https://github.com/f/prompts.chat",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2U0MTc=",
@@ -2343,6 +2616,9 @@
                 "url": "https://github.com/f",
                 "login": "f",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/196477?u=222f762304b224bba8d115fcf68e0bdb57d4e481&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -2357,7 +2633,7 @@
             "name": "awesome-machine-learning",
             "pushedAt": "2026-08-21T10:11:51Z",
             "sshUrl": "git@github.com:josephmisiti/awesome-machine-learning.git",
-            "stargazerCount": 74096,
+            "stargazerCount": 74097,
             "url": "https://github.com/josephmisiti/awesome-machine-learning",
             "primaryLanguage": {
                 "id": "MDg6TGFuZ3VhZ2UxNDU=",
@@ -2369,6 +2645,9 @@
                 "url": "https://github.com/josephmisiti",
                 "login": "josephmisiti",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/246302?u=9242c80bcb25acbc66683faf0d5d9fb92674689b&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTA="
         },
@@ -2383,7 +2662,7 @@
             "name": "awesome-javascript",
             "pushedAt": "2026-08-19T17:00:42Z",
             "sshUrl": "git@github.com:sorrycc/awesome-javascript.git",
-            "stargazerCount": 35016,
+            "stargazerCount": 35015,
             "url": "https://github.com/sorrycc/awesome-javascript",
             "primaryLanguage": null,
             "owner": {
@@ -2391,6 +2670,9 @@
                 "url": "https://github.com/sorrycc",
                 "login": "sorrycc",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/35128?u=8fbc1a12d0728494fb0b0620b1fb4a2d04b27493&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -2405,7 +2687,7 @@
             "name": "awesome-algorithms",
             "pushedAt": "2026-04-18T15:06:58Z",
             "sshUrl": "git@github.com:tayllan/awesome-algorithms.git",
-            "stargazerCount": 25465,
+            "stargazerCount": 25467,
             "url": "https://github.com/tayllan/awesome-algorithms",
             "primaryLanguage": null,
             "owner": {
@@ -2413,6 +2695,9 @@
                 "url": "https://github.com/tayllan",
                 "login": "tayllan",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/5643498?u=b65b1fcc4f834a4e61d18b4f61b2829274ace4ea&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": null
         },
@@ -2427,7 +2712,7 @@
             "name": "awesome-dotnet",
             "pushedAt": "2026-03-26T05:16:53Z",
             "sshUrl": "git@github.com:quozd/awesome-dotnet.git",
-            "stargazerCount": 21566,
+            "stargazerCount": 21565,
             "url": "https://github.com/quozd/awesome-dotnet",
             "primaryLanguage": null,
             "owner": {
@@ -2435,6 +2720,9 @@
                 "url": "https://github.com/quozd",
                 "login": "quozd",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/2129162?u=80c6f42850cbc60bcf2b72f4bd99a0b5ab8e70f7&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         },
@@ -2458,6 +2746,9 @@
                 "login": "oxnr",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/1712926?u=5fbc24897a603b5f1f2944e0d7df9724effa0003&v=4"
             },
+            "defaultBranchRef": {
+                "name": "master"
+            },
             "licenseId": "MDc6TGljZW5zZTEz"
         },
         {
@@ -2465,13 +2756,13 @@
             "createdAt": "2023-02-17T14:12:21Z",
             "description": "Awesome-LLM: a curated list of Large Language Model",
             "diskUsage": 14528,
-            "forkCount": 2677,
+            "forkCount": 2678,
             "homepageUrl": "",
             "isArchived": false,
             "name": "Awesome-LLM",
             "pushedAt": "2025-07-31T02:38:24Z",
             "sshUrl": "git@github.com:Hannibal046/Awesome-LLM.git",
-            "stargazerCount": 27275,
+            "stargazerCount": 27274,
             "url": "https://github.com/Hannibal046/Awesome-LLM",
             "primaryLanguage": null,
             "owner": {
@@ -2479,6 +2770,9 @@
                 "url": "https://github.com/Hannibal046",
                 "login": "Hannibal046",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/38466901?u=4377be98d43bb1084a71cb59375d98855dfdbfc2&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         },
@@ -2493,7 +2787,7 @@
             "name": "awesome-actions",
             "pushedAt": "2024-09-01T20:32:39Z",
             "sshUrl": "git@github.com:sdras/awesome-actions.git",
-            "stargazerCount": 28148,
+            "stargazerCount": 28149,
             "url": "https://github.com/sdras/awesome-actions",
             "primaryLanguage": null,
             "owner": {
@@ -2501,6 +2795,9 @@
                 "url": "https://github.com/sdras",
                 "login": "sdras",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/2281088?u=84b646c98eb14480c53987c23901b0001652d9d7&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "main"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         },
@@ -2527,6 +2824,9 @@
                 "url": "https://github.com/viatsko",
                 "login": "viatsko",
                 "avatarUrl": "https://avatars.githubusercontent.com/u/376065?u=453b2691bfeca5e30663ad8129dec259d6209106&v=4"
+            },
+            "defaultBranchRef": {
+                "name": "master"
             },
             "licenseId": "MDc6TGljZW5zZTY="
         }

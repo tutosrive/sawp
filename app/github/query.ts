@@ -26,6 +26,10 @@ const owner:string = `owner{
     avatarUrl
 }`
 
+const defaultBranch: string = `defaultBranchRef {
+      name
+}`
+
 const starredRepos:string = `starredRepositories(first: $first){
     totalCount
     nodes{
@@ -45,6 +49,7 @@ const starredRepos:string = `starredRepositories(first: $first){
         ${owner}
         ${topic}
         ${license}
+        ${defaultBranch}
     }
 }`
 
