@@ -46,13 +46,13 @@ export default class Helpers{
 
     static catchResultQuery(queryName: string, error: any, result: any, callOk? = null){
         if((error === undefined) || (error === null)){
-            console.log(`Query ${queryName} executed successfully`)
+            console.log(`Query "${queryName}" executed successfully`)
             if(result instanceof Array){
                 result.forEach(res => {
                     const hasRowCount:Boolean = Object.hasOwn(res, 'rowCount')
                     const hasCommand:Boolean = Object.hasOwn(res, 'command')
                     if(hasRowCount && hasCommand){
-                        console.log(`Command: ${res.command}, Row Count: ${res.rowCount}`)
+                        console.log(`Command: ${res.command}, Row Count: ${res.rowCount ?? 0}`)
                     }
                 })
             }

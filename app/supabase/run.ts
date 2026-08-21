@@ -4,14 +4,12 @@ import Helpers from '../utils/helpers.ts'
 
 export default async function runs(data:any){
     console.log(`Running supabase with data from user "${data.user.login}" ...`)
-    await createInsertQuery(data, true)
-    
-    //const db = new DB()
-    //await db.createTables(async(e:any, r:any) => {await dispatchQueries(data, db, e, r)})
+    const db = new DB()
+    await db.createTables(async(e:any, r:any) => {await dispatchQueries(data, db, e, r)})
 }
 
 async function dispatchQueries(data:any, db:any, err:any, res:any){
-    Helpers.catchResultQuery('Create Databse Tables',
+    Helpers.catchResultQuery('Create Database Tables',
         err, res, async()=>{await callOk(data, db)}
     )
 }
