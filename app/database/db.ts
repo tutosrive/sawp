@@ -6,20 +6,22 @@ export default class DB{
     private client
     private timeout
 
-    constructor(callbackAfterTables){
+    constructor(){
         this.URL = process.env.DB_CONNECTION_URL
         this.getClient()
     }
 
-    async createTables(callback){
+    async createTables(callback? = null){
         const tables = await readFile('app/database/tables.sql', 'utf8')
         const req = async () => {
-            await this.client.query(tables, (err, res) => {callback(err, res)})
+            //await this.client.query(tables, (err, res) => {callback(err, res)})
+            this.runQuery('Creating Database Tables', tables, callback)
         }
         this.handleExecuteTimeout(req, 5000)
     }
 
     private async getClient(){
+        console.log('Getting Postgres Client')
         this.client = await new Client({connectionString: this.URL}).connect()
     }
 
@@ -27,11 +29,13 @@ export default class DB{
         let tmot = setTimeout(()=>{callback(); tmot = null}, time)
     }
 
-    async runQuery(query, callback){
+    async runQuery(queryName, query, callback? = null){
         const req = async () => {
             const q = {text: query}
+            console.log(`Executing query: ${queryName}`)
             await this.client.query(q, (err, res) => {
-                callback(err, res)
+                if(callback !== null) callback(err, res)
+                else console.log(`Query Executed: ${queryName}`)
             })
         }
         this.runCallback(req, 5000)

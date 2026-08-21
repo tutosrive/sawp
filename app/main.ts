@@ -11,10 +11,10 @@ import {readFile} from 'node:fs/promises'
 async function run(){
     //getEnvVars()
     try{
-        //const data = await rung()
+        const data = await rung()
         //await writeFile('app/data.json', JSON.stringify(data))
-        let data = await readFile('app/data.json', 'utf8')
-        data = JSON.parse(data)
+        //let data = await readFile('app/data.json', 'utf8')
+        //data = JSON.parse(data)
         if(data.user && data.repositories){
             const dataPushed = await runs(data)
         }else{

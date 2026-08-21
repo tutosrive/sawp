@@ -14,7 +14,7 @@ export default class GithubService {
     }
     
     async getData(){
-        const data = await this.okt.graphql(query, {username: this.username, first:100})
+        const data = await this.okt.graphql(query, {username: this.username, first:1})
         return this.parseData(data)
     }
 

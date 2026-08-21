@@ -7,13 +7,17 @@ export default async function createInsertQuery(data:any){
         {name: 'admin', data: admin},
         {name: 'owner', data: users},
         {name: 'language', data: languages},
-        {name: 'repository', data: repositories},
         {name: 'license', data: licenses},
         {name: 'topic', data: topics},
+        {name: 'repository', data: repositories},
         {name: 'topicXrepository', data: topicsXrepo}
     ]
     let query = ''
-    tables.forEach(table => {query += `INSERT INTO ${table.name} VALUES ${table.data};\n`})
+    tables.forEach(table => {
+        if(table.data.length > 0){
+            query += `INSERT INTO ${table.name} VALUES ${table.data};\n`
+        }
+    })
     const write = async ()=> {await writeFile('app/test.txt', query, 'utf8')}
     write()
     return query.replaceAll(',)', ')')
@@ -80,9 +84,9 @@ function plainObject(obj:any): string {
     for(let key in obj) {
         let value = obj[key]
         if((typeof value) === 'string'){
-            str += `${key}:'${value}',`
+            str += `'${value}',`
         } else {
-            str += `${key}:${value},`
+            str += `${value},`
         }
     }
     str +=')'
