@@ -1,14 +1,16 @@
 import {writeFile} from 'node:fs/promises'
 import GithubService from '../github/service.ts'
 
-export default async function createInsertQuery(data){
+export default async function createInsertQuery(data:any){
     const {admin, users, languages, repositories, topics, topicsXrepo, licenses} = await parseData(data)
     const tables = [
         {name: 'admin', data: admin},
         {name: 'owner', data: users},
         {name: 'language', data: languages},
         {name: 'repository', data: repositories},
-        {name: 'licenses', data: licenses}
+        {name: 'license', data: licenses},
+        {name: 'topic', data: topics},
+        {name: 'topicXrepository', data: topicsXrepo}
     ]
     let query = ''
     tables.forEach(table => {query += `INSERT INTO ${table.name} VALUES ${table.data};\n`})
@@ -17,8 +19,9 @@ export default async function createInsertQuery(data){
     return query.replaceAll(',)', ')')
 }
 
-async function parseData(data){
+async function parseData(data: any){
     const admin = plainObject(data.user)
+    getCountByTopic(data.reposTopics, data.topicsXrepo)
     let topics = arrayPlain(data.reposTopics)
     let topicsXrepo = arrayPlain(data.topicsXrepo)
     let licenses = arrayPlain(data.licenses)
@@ -52,8 +55,15 @@ async function parseData(data){
     return {admin, users, languages, repositories, topics, topicsXrepo, licenses}
 }
 
-function arrayPlain(arr){
-    const data = []
+function getCountByTopic(topics: Array<any>, relation: Array<any>){
+    topics.forEach(topic => {
+       const founded = topics.filter(tp => tp.id === topic.id)
+       topic.stargazerCount = founded.length
+    })
+}
+
+function arrayPlain(arr: Array<any>){
+    const data:any = []
     arr.forEach((item) => {
         let exists = data.some(it => it.id === item.id)
         if(exists === false){
@@ -65,7 +75,7 @@ function arrayPlain(arr){
     return data.join(', ')
 }
 
-function plainObject(obj): string {
+function plainObject(obj:any): string {
     let str = '('
     for(let key in obj) {
         let value = obj[key]
