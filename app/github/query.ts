@@ -27,6 +27,7 @@ const owner:string = `owner{
 }`
 
 const starredRepos:string = `starredRepositories(first: $first){
+    totalCount
     nodes{
         id
         createdAt

@@ -1,12 +1,11 @@
 import DB from '../database/db.ts'
 import createInsertQuery from './query.ts'
+import Helpers from '../utils/helpers.ts'
 
-export default async function runs(data){
+export default async function runs(data:any){
     console.log(`Running supabase with data from user "${data.user.login}" ...`)
     const db = new DB()
-    console.log('Creating database tables')
-    await db.createTables((e, r) => {dispatchQueries(db, e, r)})
-    const queryInserts = createInsertQuery(data)
+    await db.createTables(async(e:any, r:any) => {await dispatchQueries(data, db, e, r)})
     //let timeout = setTimeout(async()=>{
         //await db.runQuery(queryInserts)
         //timeout = null
@@ -14,12 +13,17 @@ export default async function runs(data){
     //}, 10000)
 }
 
-async function dispatchQueries(db, err, res){
-    if((err !== undefined) && (err !== null)){
-        console.log('Not error')
-        return
-    }
-    console.log('error')
-    console.log(err, res)
-    db.closeClient()
+async function dispatchQueries(data:any, db:any, err:any, res:any){
+    Helpers.catchResultQuery('Create Databse Tables',
+        err, res, async()=>{await callOk(data, db)}
+    )
+}
+
+async function callOk(data:any, db:DB){
+    const queryInserts = await createInsertQuery(data)
+    const queryName = 'Insert Data Into Database Tables'
+    await db.runQuery(queryName, queryInserts, async (e:any, r:any) => {
+        Helpers.catchResultQuery(queryName,e,r)
+        db.closeClient()
+    })
 }

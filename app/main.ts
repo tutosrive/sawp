@@ -5,13 +5,16 @@ import {getEnvVars} from './utils/env.utils.ts'
 import rung from './github/run.ts'
 import runs from './supabase/run.ts'
 import {writeFile} from 'node:fs/promises'
+import {readFile} from 'node:fs/promises'
 //import createInsertQuery from './supabase/query.ts'
 
 async function run(){
     //getEnvVars()
     try{
-        const data = await rung() //await readFile('app/data.json', 'utf8')
-        await writeFile('app/data.json', JSON.stringify(data))
+        const data = await rung()
+        //await writeFile('app/data.json', JSON.stringify(data))
+        //let data = await readFile('app/data.json', 'utf8')
+        //data = JSON.parse(data)
         if(data.user && data.repositories){
             const dataPushed = await runs(data)
         }else{
