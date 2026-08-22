@@ -15,7 +15,7 @@ class GithubService {
     }
 
     async getData(): Promise<OktokitResponse> {
-        const data: OktokitResponse = await this.okt.graphql(query, { username: this.username, first: 2 });
+        const data: OktokitResponse = await this.okt.graphql(query, { username: this.username, last: 100 });
         return this.parseData(data);
     }
 

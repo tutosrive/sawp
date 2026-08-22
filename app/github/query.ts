@@ -1,36 +1,36 @@
-const license:string = `licenseInfo{
+const license: string = `licenseInfo{
     id
     name
     url
-}`
+}`;
 
-const topic:string = `repositoryTopics(first:100){
+const topic: string = `repositoryTopics(first:100){
     nodes{
         topic{
             id
             name
         }
     }
-}`
+}`;
 
-const primaryLanguage:string = `primaryLanguage{
+const primaryLanguage: string = `primaryLanguage{
     id
     color
     name
-}`
+}`;
 
-const owner:string = `owner{
+const owner: string = `owner{
     id
     url
     login
     avatarUrl
-}`
+}`;
 
 const defaultBranch: string = `defaultBranchRef {
       name
-}`
+}`;
 
-const starredRepos:string = `starredRepositories(last: $first){
+const starredRepos: string = `starredRepositories(last: $last){
     totalCount
     nodes{
         id
@@ -51,9 +51,9 @@ const starredRepos:string = `starredRepositories(last: $first){
         ${license}
         ${defaultBranch}
     }
-}`
+}`;
 
-const query:string = `
+const query: string = `
     query getStarredRepos($username: String!, $first: Int! = 5){
         user(login: $username){
             id
@@ -70,6 +70,6 @@ const query:string = `
             ${starredRepos}
         }
     }
-`
+`;
 
-export default query
+export default query;

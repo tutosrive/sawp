@@ -1,18 +1,18 @@
 name: 'SAWS'
 description: '"Stargazers Action With Supabase", get all user starred repositories and save it on Supabase Relational Database, by tutosrive.'
 branding:
-    icon: 'star'
-    color: '#6600ff'
+    icon: 'database'
+    color: '#150029'
 inputs:
-    github_user:
+    github-user:
         description: 'Github Username used as reference to get all it starred repositories'
         required: true
         default: ''
-    github_token:
+    github-token:
         description: 'Acces Token for the github API'
         required: true
         default: ''
-    db_connection_url:
+    db-connection-url:
         description: 'Supabase connection string "postgresql://postgres..."'
         required: true
         default: ''
