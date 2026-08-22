@@ -1,7 +1,8 @@
 import GithubService from './service.ts'
+import * as core from '@actions/core'
 
 export default async function rung(){
-    console.log('Running github ...')
+    core.debug('Getting Github Data.')
     const service = new GithubService()
     return await service.getData()
 }
