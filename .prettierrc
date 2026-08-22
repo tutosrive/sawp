@@ -1,0 +1,6 @@
+{
+    "printWidth": 350,
+    "singleQuote": true,
+    "semi": true,
+    "objectWrap": "collapse"
+}

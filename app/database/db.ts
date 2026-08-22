@@ -1,56 +1,60 @@
-import {Client} from 'pg'
-import {readFile} from 'node:fs/promises'
-    
-export default class DB{
-    private URL:string
-    private client
-    private timeout
+import { Client } from 'pg';
+import { readFile } from 'node:fs/promises';
+import * as core from '@actions/core';
 
-    constructor(){
-        this.URL = process.env.DB_CONNECTION_URL
-        this.getClient()
+export default class DB {
+    private URL: string;
+    private client;
+    private timeout;
+
+    constructor() {
+        this.URL = process.env.DB_CONNECTION_URL;
+        this.getClient();
     }
 
-    async createTables(callback? = null){
-        const tables = await readFile('app/database/tables.sql', 'utf8')
+    async createTables(callback?: (e: any, r: any) => any) {
+        const tables: string = await readFile('app/database/tables.sql', 'utf8');
         const req = async () => {
-            this.runQuery('Creating Database Tables', tables, callback)
-        }
-        this.handleExecuteTimeout(req, 5000)
+            this.runQuery('Creating Database Tables', tables, callback);
+        };
+        this.handleExecuteTimeout(req, 5000);
     }
 
-    private async getClient(){
-        console.log('Getting Postgres Client')
-        this.client = await new Client({connectionString: this.URL}).connect()
+    private async getClient() {
+        core.debug('Getting Postgres Client');
+        this.client = await new Client({ connectionString: this.URL }).connect();
     }
 
-    private handleExecuteTimeout(callback, time: Int = 2000){
-        let tmot = setTimeout(()=>{callback(); tmot = null}, time)
+    private handleExecuteTimeout(callback: () => any, time: number = 2000) {
+        const tmot: any = setTimeout(() => {
+            callback();
+            clearTimeout(tmot);
+        }, time);
     }
 
-    async runQuery(queryName, query, callback? = null){
+    async runQuery(queryName: string, query: string, callback?: (e: any, a: any) => any) {
         const req = async () => {
-            const q = {text: query}
-            console.log(`Executing query: ${queryName}`)
-            await this.client.query(q, (err, res) => {
-                if(callback !== null) callback(err, res)
-                else console.log(`Query Executed: ${queryName}`)
-            })
-        }
-        this.runCallback(req, 5000)
+            const q = { text: query };
+            core.debug(`Executing query: ${queryName}`);
+            await this.client.query(q, (err: any, res: any) => {
+                if (callback !== undefined) callback(err, res);
+                else console.log(`Query Executed: ${queryName}`);
+            });
+        };
+        this.runCallback(req, 5000);
     }
 
-    private runCallback(req, time){
-        if(this.client === undefined || this.client === null){
-            this.handleExecuteTimeout(req, time)
+    private runCallback(req: () => any, time: number) {
+        if (this.client === undefined || this.client === null) {
+            this.handleExecuteTimeout(req, time);
         } else {
-            req()
+            req();
         }
     }
 
-    async closeClient(){
-        if(this.client !== null || thid.client !== undefined){
-            await this.client.end()
+    async closeClient() {
+        if (this.client !== null || this.client !== undefined) {
+            await this.client.end();
         }
     }
 }
