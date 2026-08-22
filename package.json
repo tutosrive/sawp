@@ -23,9 +23,12 @@
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "@types/pg": "^8.23.1",
     "@vercel/ncc": "^0.45.0",
     "dotenv": "^17.4.2",
+    "ts-loader": "^9.6.2",
     "tsx": "^4.23.12",
-    "typescript": "5"
+    "typescript": "5",
+    "typescript-language-server": "^6.0.0"
   }
 }

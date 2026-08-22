@@ -1,0 +1,1 @@
+{"version":3,"file":"service.d.ts","sourceRoot":"","sources":["file:///public/projects/ts/stargazers-action/app/github/service.ts"],"names":[],"mappings":"AAGA,OAAO,EAAE,KAAK,eAAe,EAAE,MAAM,aAAa,CAAC;AAEnD,cAAM,aAAa;IACf,OAAO,CAAC,EAAE,CAAS;IACnB,OAAO,CAAC,QAAQ,CAAqB;IACrC,OAAO,CAAC,GAAG,CAAC;;IAQN,OAAO,IAAI,OAAO,CAAC,eAAe,CAAC;IAKzC,OAAO,CAAC,SAAS;CAUpB;AAED,eAAe,aAAa,CAAC"}

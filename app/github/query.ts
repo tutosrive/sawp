@@ -30,7 +30,7 @@ const defaultBranch: string = `defaultBranchRef {
       name
 }`
 
-const starredRepos:string = `starredRepositories(first: $first){
+const starredRepos:string = `starredRepositories(last: $first){
     totalCount
     nodes{
         id
