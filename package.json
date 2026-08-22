@@ -1,13 +1,19 @@
 {
-  "name": "stargazers-action-supabase",
+  "name": "SAWS",
   "version": "0.2.0",
-  "description": "Get all user starred repositories and save it on Supabase Relational Database, by tutosrive.",
+  "description": "'Stargazers Action With Supabase', get all user starred repositories and save it on Supabase Relational Database, by tutosrive.",
   "main": "./app/main.ts",
   "type": "module",
   "scripts": {
-    "start": "tsx ./app/main.ts"
+    "start": "tsx ./app/main.ts",
+    "build": "ncc build app/main.ts -o dist -s -m --license LICENSES.md"
   },
-  "keywords": ["stagazer", "supabase", "gh-action", "github-starred-repositories"],
+  "keywords": [
+    "stagazer",
+    "supabase",
+    "gh-action",
+    "github-starred-repositories"
+  ],
   "author": "tutosrive",
   "license": "AGPL-3.0",
   "dependencies": {
@@ -16,8 +22,9 @@
     "pg": "^8.23.0"
   },
   "devDependencies": {
-    "dotenv": "^17.4.2",
     "@types/node": "^26.2.0",
+    "@vercel/ncc": "^0.45.0",
+    "dotenv": "^17.4.2",
     "tsx": "^4.23.12",
     "typescript": "5"
   }
