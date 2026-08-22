@@ -1,22 +1,20 @@
 import * as core from '@actions/core'
-import * as github from '@actions/github'
-import 'dotenv/config'
 import {getEnvVars} from './utils/env.utils.ts'
 import rung from './github/run.ts'
 import runs from './supabase/run.ts'
 
 async function run(){
-    //getEnvVars()
     try{
+        getEnvVars()
         const data = await rung()
         if(data.user && data.repositories){
-            const dataPushed = await runs(data)
+            core.info(`Will be processed "${data.user.stargazerCount} repositories".`)
+            await runs(data)
         }else{
-            throw new Error("Data is not valid ...")
+            throw new Error("Data is not valid, missing user and repositories, check username and try again.")
         }
     } catch(e){
-        console.error("Has happend an error getting Data:")
-        console.error(e)
+        core.error(`Has happend an error getting Data: ${e}`)
     }
 }
 
