@@ -36,9 +36,9 @@ jobs:
         id: stargazers-action-supabase
         uses: tutosrive/stargazers-action-supabase@v0.2.0
         with:
-          github_user: ${{ github.actor }} # Or any GitHub Username
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          db_connection_url: ${{ secrets.DB_CONN_URL }} # Supabase connection string "postgresql://postgres..."
+          github-user: ${{ github.actor }} # Or any GitHub Username
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          db-connection-url: ${{ secrets.DB_CONN_URL }} # Supabase connection string "postgresql://postgres..."
 ```
 
 # Still Alive Supabase
