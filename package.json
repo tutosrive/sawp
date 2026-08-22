@@ -9,7 +9,7 @@
   },
   "keywords": ["stagazer", "supabase", "gh-action", "github-starred-repositories"],
   "author": "tutosrive",
-  "license": "AGPL-3",
+  "license": "AGPL-3.0",
   "dependencies": {
     "@actions/core": "^3.0.1",
     "@actions/github": "^9.1.1",
