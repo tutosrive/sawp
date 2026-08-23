@@ -1,4 +1,4 @@
-# Stargazers with Supabase
+# Stargazers Action With Postgres
 
 > [!IMPORTANT]
 > Supabase on FREE plan pause your project if don't get requests for 7 days or more,
