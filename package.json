@@ -1,34 +1,37 @@
 {
-  "name": "SAWS",
-  "version": "0.2.0",
-  "description": "'Stargazers Action With Supabase', get all user starred repositories and save it on Supabase Relational Database, by tutosrive.",
-  "main": "./app/main.ts",
-  "type": "module",
-  "scripts": {
-    "start": "tsx ./app/main.ts",
-    "build": "ncc build app/main.ts -o dist -s -m --license LICENSES.md"
-  },
-  "keywords": [
-    "stagazer",
-    "supabase",
-    "gh-action",
-    "github-starred-repositories"
-  ],
-  "author": "tutosrive",
-  "license": "AGPL-3.0",
-  "dependencies": {
-    "@actions/core": "^3.0.1",
-    "@actions/github": "^9.1.1",
-    "pg": "^8.23.0"
-  },
-  "devDependencies": {
-    "@types/node": "^26.2.0",
-    "@types/pg": "^8.23.1",
-    "@vercel/ncc": "^0.45.0",
-    "dotenv": "^17.4.2",
-    "ts-loader": "^9.6.2",
-    "tsx": "^4.23.12",
-    "typescript": "5",
-    "typescript-language-server": "^6.0.0"
-  }
+    "name": "SAWP",
+    "version": "0.2.0",
+    "description": "'Stargazers Action With Postgres', get all user starred repositories and save it on Postgres Relational Database, by tutosrive.",
+    "main": "./app/main.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "tsx ./app/main.ts",
+        "test-release": "node --env-file=.env ./local-tests/test-run.js",
+        "release": "node ./dist/index.js",
+        "build": "ncc build app/main.ts -o dist -s -m --license LICENSES.md"
+    },
+    "keywords": [
+        "stagazer",
+        "action",
+        "postgres",
+        "gh-action",
+        "github-starred-repositories"
+    ],
+    "author": "tutosrive",
+    "license": "AGPL-3.0",
+    "dependencies": {
+        "@actions/core": "^3.0.1",
+        "@actions/github": "^9.1.1",
+        "pg": "^8.23.0"
+    },
+    "devDependencies": {
+        "@types/node": "^26.2.0",
+        "@types/pg": "^8.23.1",
+        "@vercel/ncc": "^0.45.0",
+        "dotenv": "^17.4.2",
+        "ts-loader": "^9.6.2",
+        "tsx": "^4.23.12",
+        "typescript": "5",
+        "typescript-language-server": "^6.0.0"
+    }
 }
