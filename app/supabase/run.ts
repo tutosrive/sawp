@@ -5,7 +5,7 @@ import * as core from '@actions/core';
 import { type OktokitResponse } from '../github/models.js';
 
 export default async function runs(data: OktokitResponse) {
-    core.debug(`Running supabase with data from user "${data.user.login}"`);
+    core.info(`Running supabase with data from user "${data.user.login}"`);
     const db = new DB();
     await db.createTables(async (e: any, r: any) => {
         await dispatchQueries(data, db, e, r);

@@ -2,11 +2,12 @@ import * as github from '@actions/github';
 import query from './query.js';
 import Helpers from '../utils/helpers.js';
 import { type OktokitResponse } from './models.js';
+import { GitHub } from '@actions/github/lib/utils';
 
 class GithubService {
-    private tk: string;
+    private tk: string | undefined;
     private username: string | undefined;
-    private okt;
+    private okt: InstanceType<typeof GitHub>;
 
     constructor() {
         this.tk = process.env.GITHUB_TOKEN;
