@@ -54,7 +54,7 @@ const starredRepos: string = `starredRepositories(last: $last){
 }`;
 
 const query: string = `
-    query getStarredRepos($username: String!, $first: Int! = 5){
+    query getStarredRepos($username: String!, $last: Int! = 5){
         user(login: $username){
             id
             bio

@@ -1,6 +1,1 @@
-{
-    "printWidth": 350,
-    "singleQuote": true,
-    "semi": true,
-    "objectWrap": "collapse"
-}
+{ "printWidth": 350, "singleQuote": true, "semi": true, "objectWrap": "collapse", "tabWidth": 4 }

@@ -45,13 +45,13 @@ export default class Helpers {
 
     static catchResultQuery(queryName: string, error: any, result: any, callOk: (() => any) | null = null) {
         if (error === undefined || error === null) {
-            core.debug(`Query "${queryName}" executed successfully`);
+            core.info(`Query "${queryName}" executed successfully`);
             if (result instanceof Array) {
                 result.forEach((res) => {
                     const hasRowCount: Boolean = Object.hasOwn(res, 'rowCount');
                     const hasCommand: Boolean = Object.hasOwn(res, 'command');
                     if (hasRowCount && hasCommand) {
-                        core.debug(`Command: ${res.command}, Row Count: ${res.rowCount ?? 0}`);
+                        core.info(`Command: ${res.command}, Row Count: ${res.rowCount ?? 0}`);
                     }
                 });
             }

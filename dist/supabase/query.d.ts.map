@@ -1,1 +1,1 @@
-{"version":3,"file":"query.d.ts","sourceRoot":"","sources":["file:///public/projects/ts/stargazers-action/app/supabase/query.ts"],"names":[],"mappings":"AAAA,OAAO,EAA0F,KAAK,eAAe,EAAE,MAAM,qBAAqB,CAAC;AAEnJ,wBAA8B,iBAAiB,CAAC,IAAI,EAAE,eAAe,EAAE,OAAO,GAAE,OAAe,GAAG,OAAO,CAAC,MAAM,CAAC,CAmBhH"}
+{"version":3,"file":"query.d.ts","sourceRoot":"","sources":["file:///D:/GITHUB/projects/sawp/app/supabase/query.ts"],"names":[],"mappings":"AAAA,OAAO,EAA0F,KAAK,eAAe,EAAE,MAAM,qBAAqB,CAAC;AAEnJ,wBAA8B,iBAAiB,CAAC,IAAI,EAAE,eAAe,EAAE,OAAO,GAAE,OAAe,GAAG,OAAO,CAAC,MAAM,CAAC,CAmBhH"}

@@ -21,7 +21,7 @@ export default class DB {
     }
 
     private async getClient() {
-        core.debug('Getting Postgres Client');
+        core.info('Getting Postgres Client');
         this.client = await new Client({ connectionString: this.URL }).connect();
     }
 
@@ -35,7 +35,7 @@ export default class DB {
     async runQuery(queryName: string, query: string, callback?: (e: any, a: any) => any) {
         const req = async () => {
             const q = { text: query };
-            core.debug(`Executing query: ${queryName}`);
+            core.info(`Executing query: ${queryName}`);
             await this.client.query(q, (err: any, res: any) => {
                 if (callback !== undefined) callback(err, res);
                 else console.log(`Query Executed: ${queryName}`);
