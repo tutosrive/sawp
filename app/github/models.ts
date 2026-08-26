@@ -5,21 +5,6 @@ export interface Owner {
     avatarUrl: string | null;
 }
 
-export interface Admin {
-    id: string;
-    bio: string | null;
-    avatarUrl: string | null;
-    company: string | null;
-    createdAt: string;
-    email: string | null;
-    location: string | null;
-    login: string;
-    name: string | null;
-    url: string;
-    websiteUrl: string | null;
-    stargazerCount: number;
-}
-
 export interface Language {
     id: string;
     color: string;
@@ -87,8 +72,29 @@ export interface StarredRepo {
     defaultBranchRef?: { name: string };
 }
 
+export interface Admin {
+    id: string;
+    bio: string | null;
+    avatarUrl: string;
+    company: string | null;
+    createdAt: string;
+    email: string | null;
+    location: string | null;
+    login: string;
+    name: string | null;
+    url: string;
+    websiteUrl: string | null;
+    stargazerCount?: number;
+    starredRepositories?: { totalCount: number; nodes: Array<StarredRepo>; pageInfo: PageInfo };
+}
+
+export interface PageInfo {
+    hasNextPage: boolean;
+    endCursor: string | null;
+}
+
 export interface OktokitResponse {
-    user: { id: string; bio: string | null; avatarUrl: string; company: string | null; createdAt: string; email: string | null; location: string | null; login: string; name: string | null; url: string; websiteUrl: string | null; stargazerCount?: number; starredRepositories?: { totalCount: number; nodes: Array<StarredRepo> } };
+    user: Admin;
     repositories?: Array<StarredRepo>;
     licenses?: Array<License>;
     topicsXrepo?: Array<TopicXRepository>;

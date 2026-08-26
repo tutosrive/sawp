@@ -1,3 +1,8 @@
+const pageInfo: string = `pageInfo{
+    hasNextPage
+    endCursor
+}`;
+
 const license: string = `licenseInfo{
     id
     name
@@ -30,7 +35,7 @@ const defaultBranch: string = `defaultBranchRef {
       name
 }`;
 
-const starredRepos: string = `starredRepositories(last: $last){
+const starredRepos: string = `starredRepositories(first: $first, after: $endCursor){
     totalCount
     nodes{
         id
@@ -51,25 +56,28 @@ const starredRepos: string = `starredRepositories(last: $last){
         ${license}
         ${defaultBranch}
     }
+    ${pageInfo}
 }`;
 
-const query: string = `
-    query getStarredRepos($username: String!, $last: Int! = 5){
+export const admin: string = `query($username){
+    user(login: $username: String!){
+        id
+        bio
+        avatarUrl
+        company
+        createdAt
+        email
+        location
+        login
+        name
+        url
+        websiteUrl
+}`;
+
+export const query: string = `
+    query getStarredRepos($username: String!, $first: Int! = 5, $endCursor: String){
         user(login: $username){
-            id
-            bio
-            avatarUrl
-            company
-            createdAt
-            email
-            location
-            login
-            name
-            url
-            websiteUrl
             ${starredRepos}
         }
     }
 `;
-
-export default query;

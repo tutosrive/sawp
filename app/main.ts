@@ -10,7 +10,7 @@ async function run() {
         const data: OktokitResponse = await rung();
         if (data.user && data.repositories) {
             core.info(`Will be processed "${data.user.stargazerCount} repositories".`);
-            await runs(data);
+            // await runs(data);
         } else {
             throw new Error('Data is not valid, missing user and repositories, check username and try again.');
         }
