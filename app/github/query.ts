@@ -59,8 +59,8 @@ const starredRepos: string = `starredRepositories(first: $first, after: $endCurs
     ${pageInfo}
 }`;
 
-export const admin: string = `query($username){
-    user(login: $username: String!){
+export const admin: string = `query getAdmin($username: String!){
+    user(login: $username){
         id
         bio
         avatarUrl
@@ -72,6 +72,7 @@ export const admin: string = `query($username){
         name
         url
         websiteUrl
+    }
 }`;
 
 export const query: string = `
