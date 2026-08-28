@@ -10,7 +10,7 @@
 Requirements:
 
 1. Just get your postgres "Connection String" (postgres format: `postgresql://postgres...`)
-2. Github Token (Just "repo scope" for read repositories data)
+2. Github Token (Repo Scope and User Scope for read repositories data and user data as ADMIN)
 3. Github User Name
 
 # How use?
