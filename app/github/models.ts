@@ -88,6 +88,10 @@ export interface Admin {
     starredRepositories?: { totalCount: number; nodes: Array<StarredRepo>; pageInfo: PageInfo };
 }
 
+export interface AdminGet {
+    user: Admin;
+}
+
 export interface PageInfo {
     hasNextPage: boolean;
     endCursor: string | null;

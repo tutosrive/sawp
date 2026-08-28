@@ -97,6 +97,9 @@ export interface Admin {
         pageInfo: PageInfo;
     };
 }
+export interface AdminGet {
+    user: Admin;
+}
 export interface PageInfo {
     hasNextPage: boolean;
     endCursor: string | null;
