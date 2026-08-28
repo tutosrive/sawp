@@ -1,15 +1,13 @@
-const pageInfo: string = `pageInfo{
+const pageInfo = `pageInfo{
     hasNextPage
     endCursor
 }`;
-
-const license: string = `licenseInfo{
+const license = `licenseInfo{
     id
     name
     url
 }`;
-
-const topic: string = `repositoryTopics(first:100){
+const topic = `repositoryTopics(first:100){
     nodes{
         topic{
             id
@@ -17,25 +15,21 @@ const topic: string = `repositoryTopics(first:100){
         }
     }
 }`;
-
-const primaryLanguage: string = `primaryLanguage{
+const primaryLanguage = `primaryLanguage{
     id
     color
     name
 }`;
-
-const owner: string = `owner{
+const owner = `owner{
     id
     url
     login
     avatarUrl
 }`;
-
-const defaultBranch: string = `defaultBranchRef {
+const defaultBranch = `defaultBranchRef {
       name
 }`;
-
-const starredRepos: string = `starredRepositories(first: $first, after: $endCursor){
+const starredRepos = `starredRepositories(first: $first, after: $endCursor){
     totalCount
     nodes{
         id
@@ -58,8 +52,7 @@ const starredRepos: string = `starredRepositories(first: $first, after: $endCurs
     }
     ${pageInfo}
 }`;
-
-export const admin: string = `query getAdmin($username: String!){
+export const admin = `query getAdmin($username: String!){
     user(login: $username){
         id
         bio
@@ -74,11 +67,11 @@ export const admin: string = `query getAdmin($username: String!){
         websiteUrl
     }
 }`;
-
-export const query: string = `
+export const query = `
     query getStarredRepos($username: String!, $first: Int! = 5, $endCursor: String){
         user(login: $username){
             ${starredRepos}
         }
     }
 `;
+//# sourceMappingURL=query.js.map

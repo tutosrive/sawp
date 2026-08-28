@@ -13,7 +13,7 @@ vars.forEach((v) => {
     exports.push(`set ${v.name}=${v.value}`);
 });
 
-const command = `${exports.join(' && ')} && node ./dist/index.js`;
+const command = `${exports.join(' && ')} && pnpm dev`;
 exec(command, (e, std, stderr) => {
     if (e) {
         console.log('[ERROR]', e.message);
