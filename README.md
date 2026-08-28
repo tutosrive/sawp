@@ -1,17 +1,22 @@
 # Stargazers Actions With Postgres
 
-> [!NOTE]
+You can use it like you want, however, it's developed to use with this [React template](https://github.com/tutosrive/srtws/). It's inspired initially on [Astral](https://github.com/astralapp/astral)
+
+> [!WARNING]
+> I don't filter private repositories in this version ([v0.2.0](https://github.com/tutosrive/sawp/releases/tag/v0.2.0)), use it with precaution ...
+
+> [!IMPORTANT]
 > You can use any postgres server provider, like supabase, azure, any but one that support connection string IPV4 (This repo don't support IPV6 right now)
 
-> [!NOTE]
-> If you use Supabase on FREE plan pause your project if don't get requests for 7 days or more,
-> So, you can try still alive it with a Cron Job, sending requests to your supabase `"http link" + "/auth/v1/health"` with this cron expresion "0 0 _/5 _ \*"
-
-Requirements:
+## Requirements:
 
 1. Just get your postgres "Connection String" (postgres format: `postgresql://postgres...`)
 2. Github Token (Repo Scope and User Scope for read repositories data and user data as ADMIN)
 3. Github User Name
+
+> [!NOTE]
+> If you use Supabase on FREE plan pause your project if don't get requests for 7 days or more,
+> So, you can try still alive it with a Cron Job, sending requests to your supabase `"http link" + "/auth/v1/health"` with this cron expresion "0 0 _/5 _ \*"
 
 # How use?
 
