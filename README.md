@@ -48,4 +48,4 @@ jobs:
 
 # Still Alive Supabase
 
-My Stargazer supabase is alive?: [check](https://zxl40pkp.status.cron-job.org/)
+My Stargazer supabase is alive?: [![Stargazers](https://github.com/tutosrive/supabase-keep-db-live/actions/workflows/stargazers.yml/badge.svg?branch=main)](https://github.com/tutosrive/supabase-keep-db-live/actions/workflows/stargazers.yml)
