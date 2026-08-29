@@ -1,6 +1,6 @@
 # Stargazers Actions With Postgres
 
-You can use it like you want, however, it's developed to use with this [React template](https://github.com/tutosrive/srtws/). It's inspired initially on [Astral](https://github.com/astralapp/astral)
+You can use it like you want, however, it's developed to use with this [Astral Supa](https://github.com/tutosrive/astralsupa). It's inspired initially on [Astral](https://github.com/astralapp/astral)
 
 > [!WARNING]
 > I don't filter private repositories in this version ([v0.2.0](https://github.com/tutosrive/sawp/releases/tag/v0.2.0)), use it with precaution ...
@@ -16,7 +16,7 @@ You can use it like you want, however, it's developed to use with this [React te
 
 > [!NOTE]
 > If you use Supabase on FREE plan pause your project if don't get requests for 7 days or more,
-> So, you can try still alive it with a Cron Job, sending requests to your supabase `"http link" + "/auth/v1/health"` with this cron expresion "0 0 _/5 _ \*"
+> So, you can try [Supabase Keep DB Live](https://github.com/juansebsol/supabase-keep-db-live)
 
 # How use?
 
