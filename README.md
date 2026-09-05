@@ -1,6 +1,7 @@
-# Stargazers Actions With Postgres
+# Stargazers Actions With Postgres [![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef.svg)](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef)
 
-> Build in: [![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef.svg)](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef)
+> [!NOTE]
+> You can use this template: [sawp-template](https://github.com/tutosrive/sawp-template)
 
 > [!WARNING]
 > I don't filter private repositories in this version ([v0.2.0](https://github.com/tutosrive/sawp/releases/tag/v0.2.0)), use it with precaution ...
