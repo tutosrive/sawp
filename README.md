@@ -31,9 +31,8 @@ jobs:
             - uses: actions/checkout@v7
 
             # Process all Starred Repositoties from an User
-            - name: Create star list
-              id: sawp-job
-              uses: tutosrive/sawp@v0.2.0
+            - name: SWP-action
+              uses: tutosrive/sawp@v0.2.0.release
               with:
                   github-user: ${{ github.actor }} # Or any GitHub Username
                   github-token: ${{ secrets.GITHUB_TOKEN }}
