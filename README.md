@@ -12,10 +12,6 @@
 2. Github Token (Repo Scope and User Scope for read repositories data and user data as ADMIN)
 3. Github User Name
 
-> [!NOTE]
-> If you use Supabase on FREE plan pause your project if don't get requests for 7 days or more,
-> So, you can try [Supabase Keep DB Live](https://github.com/juansebsol/supabase-keep-db-live)
-
 # How use?
 
 You can use this action using a action file (`.yml` or `.yaml`) like this:
