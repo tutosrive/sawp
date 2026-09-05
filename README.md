@@ -1,7 +1,5 @@
 # Stargazers Actions With Postgres
 
-You can use it like you want, however, it's developed to use with this [Astral Supa](https://github.com/tutosrive/astralsupa). It's inspired initially on [Astral](https://github.com/astralapp/astral)
-
 > [!WARNING]
 > I don't filter private repositories in this version ([v0.2.0](https://github.com/tutosrive/sawp/releases/tag/v0.2.0)), use it with precaution ...
 
