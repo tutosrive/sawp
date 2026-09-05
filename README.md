@@ -39,6 +39,15 @@ jobs:
                   db-connection-url: ${{ secrets.DB_CONN_URL }} # Supabase connection string "postgresql://postgres..."
 ```
 
-# Still Alive Supabase
+---
+
+### Database Model (v0.2.0.release)
+
+![dbmodels](./dbmodels.png)
+
+---
+
+(I use Supabase, and there is it status)
+### Still Alive Supabase
 
 My Stargazer supabase is alive?: [![Cron job status](https://api.cron-job.org/jobs/8298832/7e6cb9fd139ac93e/status-1.svg)](https://zxl40pkp.status.cron-job.org/)
