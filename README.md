@@ -46,7 +46,7 @@ jobs:
 
 ### Database Model (v0.2.0.release)
 
-![dbmodels](./dbmodels.png)
+[![dbmodels](./dbmodels.png)](https://raw.githubusercontent.com/tutosrive/sawp/master/dbmodels.png)
 
 ---
 
