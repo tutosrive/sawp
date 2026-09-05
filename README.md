@@ -1,4 +1,4 @@
-# Stargazers Actions With Postgres [![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef.svg)](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef)
+# Stargazers Actions With Postgres ![wakatime](https://wakatime.com/badge/user/af6e3d3d-e2b5-480d-a492-1fbd9614f9c5/project/706d9caa-73b5-435d-92b4-072aceb718ef.svg)
 
 > [!NOTE]
 > You can use this template: [sawp-template](https://github.com/tutosrive/sawp-template)
