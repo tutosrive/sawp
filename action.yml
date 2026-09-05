@@ -1,5 +1,5 @@
-name: 'SAWP'
-description: '"Stargazers Action With Postgres", get all user starred repositories and save it on Postgres Relational Database, by tutosrive.'
+name: 'SWP-action'
+description: '"Stargazers Action With Postgres", get all user starred repositories and save it on Postgres Relational Database'
 branding:
   icon: 'database'
   color: '#150029'
