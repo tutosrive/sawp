@@ -37,7 +37,7 @@ stargazerCount INTEGER NOT NULL DEFAULT 0);
 
 CREATE TABLE language (
 id TEXT PRIMARY KEY NOT NULL,
-color TEXT NOT NULL DEFAULT '#FFD1AA00',
+color TEXT DEFAULT '#FFD1AA00',
 name TEXT NOT NULL UNIQUE);
 /**
 @table: language
