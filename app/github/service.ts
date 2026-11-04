@@ -5,6 +5,7 @@ import Helpers from '../utils/helpers.js';
 import { type OktokitResponse, StarredRepo, AdminGet } from './models.js';
 import { GitHub } from '@actions/github/lib/utils';
 import { setTimeout } from 'node:timers/promises';
+import { clearGithubCache, readGithubCache, writeGithubCache } from './cache.js';
 
 class GithubService {
     private tk: string | undefined;
@@ -18,31 +19,67 @@ class GithubService {
     }
 
     async getData(): Promise<OktokitResponse> {
-        const TIMEOUT_SECONDS = 10;
-        const TIMEOUT = TIMEOUT_SECONDS * 1000;
+        const PAGE_SIZE = 25;
+        const RETRY_DELAY_MS = 5000;
+        const MAX_RETRIES = 5;
         const REPOSITORIES: Array<StarredRepo> = [];
         let hasNextPage: boolean = true;
         let data: OktokitResponse;
         let endCursor: string | null = null;
+        const cachedData = await readGithubCache();
+        if (cachedData) {
+            core.info('Using cached Github Data.');
+            return this.parseData(cachedData);
+        }
         do {
-            try {
-                data = await this.okt.graphql(query, { username: this.username, first: 100, endCursor });
-                REPOSITORIES.push(...data.user.starredRepositories.nodes);
-                const PAGEINFO = data.user.starredRepositories.pageInfo;
-                core.debug(`pageInfo: ${JSON.stringify(PAGEINFO)}`);
-                hasNextPage = PAGEINFO.hasNextPage ?? false;
-                endCursor = PAGEINFO.endCursor;
-            } catch (e) {
-                const MSG = data && data.user && data.user.starredRepositories ? `GitHub Limit Reached; ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories, wait ${TIMEOUT_SECONDS} seconds` : "Has happend an error, but service is trying get again ... wait";
-                core.info(MSG);
-                const aw = await setTimeout(TIMEOUT, `API limit has been restaured after ${TIMEOUT_SECONDS} seconds.`);
-                core.info(aw);
+            let attempt = 0;
+            while (true) {
+                try {
+                    data = await this.okt.graphql(query, { username: this.username, first: PAGE_SIZE, endCursor });
+                    REPOSITORIES.push(...data.user.starredRepositories.nodes);
+                    const PAGEINFO = data.user.starredRepositories.pageInfo;
+                    core.debug(`pageInfo: ${JSON.stringify(PAGEINFO)}`);
+                    hasNextPage = PAGEINFO.hasNextPage ?? false;
+                    endCursor = PAGEINFO.endCursor;
+                    break;
+                } catch (e) {
+                    attempt += 1;
+                    if (!this.isRetryableError(e) || attempt > MAX_RETRIES) {
+                        await clearGithubCache();
+                        throw e;
+                    }
+
+                    const message = e instanceof Error ? e.message : String(e);
+                    const delay = Math.min(RETRY_DELAY_MS * 2 ** (attempt - 1), 60000);
+                    core.warning(`GitHub request failed (${message}). Retrying in ${delay / 1000} seconds.`);
+                    await setTimeout(delay);
+                }
             }
         } while (hasNextPage);
         data.repositories = REPOSITORIES;
         core.info(`Has been processed ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories.`);
-        await this.getAdmin(data);
-        return this.parseData(data);
+        if(data && data.repositories && data.user){
+            try {
+                await this.getAdmin(data);
+            } catch (error) {
+                await clearGithubCache();
+                throw error;
+            }
+            await writeGithubCache(data);
+            return this.parseData(data);
+        } else {
+            return null
+        }
+    }
+
+    private isRetryableError(error: unknown): boolean {
+        const status = typeof error === 'object' && error !== null && 'status' in error
+            ? error.status
+            : undefined;
+        const message = error instanceof Error ? error.message : String(error);
+
+        return (typeof status === 'number' && [403, 429, 500, 502, 503, 504].includes(status))
+            || /rate limit|secondary rate limit|timeout|temporarily unavailable/i.test(message);
     }
 
     private async getAdmin(data: OktokitResponse) {

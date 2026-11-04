@@ -2,6 +2,7 @@ import { type Language, type Owner, type License, type Admin, type Topic, type T
 
 export default async function createInsertQuery(data: OktokitResponse, isFirst: boolean = false): Promise<string> {
     const { admin, users, languages, repositories, topics, topicsXrepo, licenses } = await parseData(data);
+    const version = new Date(Date.now()).toISOString();
     const tables = [
         { name: 'owner', data: users },
         { name: 'language', data: languages },
@@ -9,6 +10,7 @@ export default async function createInsertQuery(data: OktokitResponse, isFirst: 
         { name: 'topic', data: topics },
         { name: 'repository', data: repositories },
         { name: 'topicXrepository', data: topicsXrepo },
+        { name: 'db_version', data: `($$${version}$$)` },
     ];
     isFirst === true ? tables.unshift({ name: 'admin', data: admin }) : null;
     let query: string = '';
