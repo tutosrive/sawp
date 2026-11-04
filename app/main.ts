@@ -3,6 +3,7 @@ import { getEnvVars } from './utils/env.utils.js';
 import rung from './github/run.js';
 import runs from './supabase/run.js';
 import { type OktokitResponse } from './github/models.js';
+import { clearGithubCache } from './github/cache.js';
 
 async function run() {
     try {
@@ -11,6 +12,8 @@ async function run() {
         if (data && data.user && data.repositories) {
             core.info(`Will be processed "${data.user.stargazerCount} repositories" and sent it to you database.`);
             await runs(data);
+            await clearGithubCache();
+            core.info('Github cache cleared after successful insertion.');
         } else {
             throw new Error('Data is not valid, missing user and repositories, check username and try again.');
         }

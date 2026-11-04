@@ -5,6 +5,7 @@ import Helpers from '../utils/helpers.js';
 import { type OktokitResponse, StarredRepo, AdminGet } from './models.js';
 import { GitHub } from '@actions/github/lib/utils';
 import { setTimeout } from 'node:timers/promises';
+import { clearGithubCache, readGithubCache, writeGithubCache } from './cache.js';
 
 class GithubService {
     private tk: string | undefined;
@@ -25,6 +26,11 @@ class GithubService {
         let hasNextPage: boolean = true;
         let data: OktokitResponse;
         let endCursor: string | null = null;
+        const cachedData = await readGithubCache();
+        if (cachedData) {
+            core.info('Using cached Github Data.');
+            return this.parseData(cachedData);
+        }
         do {
             let attempt = 0;
             while (true) {
@@ -39,6 +45,7 @@ class GithubService {
                 } catch (e) {
                     attempt += 1;
                     if (!this.isRetryableError(e) || attempt > MAX_RETRIES) {
+                        await clearGithubCache();
                         throw e;
                     }
 
@@ -52,7 +59,13 @@ class GithubService {
         data.repositories = REPOSITORIES;
         core.info(`Has been processed ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories.`);
         if(data && data.repositories && data.user){
-            await this.getAdmin(data);
+            try {
+                await this.getAdmin(data);
+            } catch (error) {
+                await clearGithubCache();
+                throw error;
+            }
+            await writeGithubCache(data);
             return this.parseData(data);
         } else {
             return null

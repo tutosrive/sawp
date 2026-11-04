@@ -5,59 +5,36 @@ import path from 'node:path';
 
 export default class DB {
     private URL: string;
-    private client;
-    private timeout;
+    private client: Promise<Client>;
 
     constructor() {
         this.URL = process.env.DB_CONNECTION_URL;
-        this.getClient();
+        this.client = this.getClient();
     }
 
-    async createTables(callback?: (e: any, r: any) => any) {
+    async createTables() {
         const actionPath = process.env.GITHUB_ACTION_PATH ?? process.cwd();
         const tablesPath = path.join(actionPath, 'app', 'database', 'tables.sql');
         const tables: string = await readFile(tablesPath, 'utf8');
-        const req = async () => {
-            this.runQuery('Creating Database Tables', tables, callback);
-        };
-        this.handleExecuteTimeout(req, 5000);
+        return this.runQuery('Creating Database Tables', tables);
     }
 
-    private async getClient() {
+    private async getClient(): Promise<Client> {
         core.info('Getting Postgres Client');
-        this.client = await new Client({ connectionString: this.URL }).connect();
+        const client = new Client({ connectionString: this.URL });
+        await client.connect();
+        return client;
     }
 
-    private handleExecuteTimeout(callback: () => any, time: number = 2000) {
-        const tmot: any = setTimeout(() => {
-            callback();
-            clearTimeout(tmot);
-        }, time);
-    }
-
-    async runQuery(queryName: string, query: string, callback?: (e: any, a: any) => any) {
-        const req = async () => {
-            const q = { text: query };
-            core.info(`Executing query: ${queryName}`);
-            await this.client.query(q, (err: any, res: any) => {
-                if (callback !== undefined) callback(err, res);
-                else console.log(`Query Executed: ${queryName}`);
-            });
-        };
-        this.runCallback(req, 5000);
-    }
-
-    private runCallback(req: () => any, time: number) {
-        if (this.client === undefined || this.client === null) {
-            this.handleExecuteTimeout(req, time);
-        } else {
-            req();
-        }
+    async runQuery(queryName: string, query: string) {
+        const client = await this.client;
+        const q = { text: query };
+        core.info(`Executing query: ${queryName}`);
+        return client.query(q);
     }
 
     async closeClient() {
-        if (this.client !== null || this.client !== undefined) {
-            await this.client.end();
-        }
+        const client = await this.client;
+        await client.end();
     }
 }

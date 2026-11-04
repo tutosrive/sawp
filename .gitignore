@@ -1,4 +1,6 @@
 .env
+.sawp-github-cache.json
+.sawp-github-cache.json.tmp
 node_modules
 **/build
 .env
