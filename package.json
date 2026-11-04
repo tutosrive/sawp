@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "tsx ./app/main.ts",
         "test-release": "node --env-file=.env ./local-tests/test-run.js",
-        "release": "node ./dist/index.js",
+        "release": "node --env-file-if-exists=.env ./dist/index.js",
         "build": "ncc build app/main.ts -o dist -s -m --license LICENSES.md"
     },
     "keywords": [
