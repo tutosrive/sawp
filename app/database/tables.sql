@@ -29,11 +29,15 @@ CREATE TABLE IF NOT EXISTS admin (
     stargazercount INTEGER NOT NULL DEFAULT 0
 );
 
-CREATE TABLE IF NOT EXISTS language (
-    id TEXT PRIMARY KEY NOT NULL,
-    color TEXT,
-    name TEXT NOT NULL UNIQUE
-);
+CREATE TABLE language (
+id TEXT PRIMARY KEY NOT NULL,
+color TEXT DEFAULT '#FFD1AA00',
+name TEXT NOT NULL UNIQUE);
+/**
+@table: language
+@description: Programming Language object
+@columnsDescription:  id() color(Badge color) name()
+*/
 
 CREATE TABLE IF NOT EXISTS topic (
     id TEXT PRIMARY KEY NOT NULL,

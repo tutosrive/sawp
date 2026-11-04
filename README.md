@@ -23,23 +23,26 @@ You can use this action using a action file (`.yml` or `.yaml`) like this:
 name: SAWP
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-            - uses: actions/checkout@v7
-
-            # Process all Starred Repositoties from an User
-            - name: SWP-action
-              uses: tutosrive/sawp@v0.2.0.release
-              with:
-                  github-user: ${{ github.actor }} # Or any GitHub Username
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  db-connection-url: ${{ secrets.DB_CONN_URL }} # Supabase connection string "postgresql://postgres..."
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v7
+      - name: Preparar schema de BD
+        run: |
+          mkdir -p app/database
+          curl -fsSL https://raw.githubusercontent.com/tutosrive/sawp/master/app/database/tables.sql -o app/database/tables.sql
+      # Process all Starred Repositoties from an User
+      - name: SWP-action
+        uses: tutosrive/sawp@v0.2.0.release
+        with:
+          github-user: ${{ github.actor }} # Or any GitHub Username
+          github-token: ${{ secrets.GH_TOKEN }}
+          db-connection-url: ${{ secrets.DB_CONN_URL }} # Supabase connection string "postgresql://postgres..."
 ```
 
 ---
