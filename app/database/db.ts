@@ -14,7 +14,8 @@ export default class DB {
     }
 
     async createTables(callback?: (e: any, r: any) => any) {
-        const tablesPath = path.join(__dirname, '..', 'app', 'database', 'tables.sql');
+        const actionPath = process.env.GITHUB_ACTION_PATH ?? process.cwd();
+        const tablesPath = path.join(actionPath, 'app', 'database', 'tables.sql');
         const tables: string = await readFile(tablesPath, 'utf8');
         const req = async () => {
             this.runQuery('Creating Database Tables', tables, callback);
