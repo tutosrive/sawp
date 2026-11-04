@@ -18,9 +18,9 @@ class GithubService {
     }
 
     async getData(): Promise<OktokitResponse> {
-        const TIMEOUT_SECONDS = 10;
-        const TIMEOUT = TIMEOUT_SECONDS * 1000;
-        const MAX_RETRIES = 3;
+        const PAGE_SIZE = 25;
+        const RETRY_DELAY_MS = 5000;
+        const MAX_RETRIES = 5;
         const REPOSITORIES: Array<StarredRepo> = [];
         let hasNextPage: boolean = true;
         let data: OktokitResponse;
@@ -29,7 +29,7 @@ class GithubService {
             let attempt = 0;
             while (true) {
                 try {
-                    data = await this.okt.graphql(query, { username: this.username, first: 100, endCursor });
+                    data = await this.okt.graphql(query, { username: this.username, first: PAGE_SIZE, endCursor });
                     REPOSITORIES.push(...data.user.starredRepositories.nodes);
                     const PAGEINFO = data.user.starredRepositories.pageInfo;
                     core.debug(`pageInfo: ${JSON.stringify(PAGEINFO)}`);
@@ -43,8 +43,9 @@ class GithubService {
                     }
 
                     const message = e instanceof Error ? e.message : String(e);
-                    core.warning(`GitHub request failed (${message}). Retrying in ${TIMEOUT_SECONDS} seconds.`);
-                    await setTimeout(TIMEOUT);
+                    const delay = Math.min(RETRY_DELAY_MS * 2 ** (attempt - 1), 60000);
+                    core.warning(`GitHub request failed (${message}). Retrying in ${delay / 1000} seconds.`);
+                    await setTimeout(delay);
                 }
             }
         } while (hasNextPage);
