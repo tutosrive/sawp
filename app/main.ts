@@ -8,7 +8,7 @@ async function run() {
     try {
         getEnvVars();
         const data: OktokitResponse = await rung();
-        if (data.user && data.repositories) {
+        if (data && data.user && data.repositories) {
             core.info(`Will be processed "${data.user.stargazerCount} repositories" and sent it to you database.`);
             await runs(data);
         } else {

@@ -32,17 +32,31 @@ class GithubService {
                 core.debug(`pageInfo: ${JSON.stringify(PAGEINFO)}`);
                 hasNextPage = PAGEINFO.hasNextPage ?? false;
                 endCursor = PAGEINFO.endCursor;
+                core.debug(data?.toString())
             } catch (e) {
-                const MSG = data && data.user && data.user.starredRepositories ? `GitHub Limit Reached; ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories, wait ${TIMEOUT_SECONDS} seconds` : "Has happend an error, but service is trying get again ... wait";
-                core.info(MSG);
-                const aw = await setTimeout(TIMEOUT, `API limit has been restaured after ${TIMEOUT_SECONDS} seconds.`);
-                core.info(aw);
+                core.debug(e)
+                const BAD_ERROR = /httperror|bad credentials|(?!(?:.*)?github limit reached).+/i;
+                if(!BAD_ERROR.test(e.toString())){
+                    core.info(e)
+                    const MSG = !data || !data.user || !data.user.starredRepositories ? "Loading ..." : `GitHub Limit Reached; ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories, wait ${TIMEOUT_SECONDS} seconds`;
+                    core.info(MSG);
+                    const aw = await setTimeout(TIMEOUT, `API limit has been restaured after ${TIMEOUT_SECONDS} seconds.`);
+                    core.info(aw);
+                } else {
+                    hasNextPage = false;
+                    data = null
+                    return
+                }
             }
         } while (hasNextPage);
         data.repositories = REPOSITORIES;
         core.info(`Has been processed ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories.`);
-        await this.getAdmin(data);
-        return this.parseData(data);
+        if(data && data.repositories && data.user){
+            await this.getAdmin(data);
+            return this.parseData(data);
+        } else {
+            return null
+        }
     }
 
     private async getAdmin(data: OktokitResponse) {
