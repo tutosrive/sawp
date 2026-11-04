@@ -33,7 +33,7 @@ class GithubService {
                 hasNextPage = PAGEINFO.hasNextPage ?? false;
                 endCursor = PAGEINFO.endCursor;
             } catch (e) {
-                const MSG = `GitHub Limit Reached; ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories, wait ${TIMEOUT_SECONDS} seconds`;
+                const MSG = data && data.user && data.user.starredRepositories ? `GitHub Limit Reached; ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories, wait ${TIMEOUT_SECONDS} seconds` : "Has happend an error, but service is trying get again ... wait";
                 core.info(MSG);
                 const aw = await setTimeout(TIMEOUT, `API limit has been restaured after ${TIMEOUT_SECONDS} seconds.`);
                 core.info(aw);
