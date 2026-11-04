@@ -20,32 +20,31 @@ class GithubService {
     async getData(): Promise<OktokitResponse> {
         const TIMEOUT_SECONDS = 10;
         const TIMEOUT = TIMEOUT_SECONDS * 1000;
+        const MAX_RETRIES = 3;
         const REPOSITORIES: Array<StarredRepo> = [];
         let hasNextPage: boolean = true;
         let data: OktokitResponse;
         let endCursor: string | null = null;
         do {
-            try {
-                data = await this.okt.graphql(query, { username: this.username, first: 100, endCursor });
-                REPOSITORIES.push(...data.user.starredRepositories.nodes);
-                const PAGEINFO = data.user.starredRepositories.pageInfo;
-                core.debug(`pageInfo: ${JSON.stringify(PAGEINFO)}`);
-                hasNextPage = PAGEINFO.hasNextPage ?? false;
-                endCursor = PAGEINFO.endCursor;
-                core.debug(data?.toString())
-            } catch (e) {
-                core.debug(e)
-                const BAD_ERROR = /httperror|bad credentials|(?!(?:.*)?github limit reached).+/i;
-                if(!BAD_ERROR.test(e.toString())){
-                    core.info(e)
-                    const MSG = !data || !data.user || !data.user.starredRepositories ? "Loading ..." : `GitHub Limit Reached; ${REPOSITORIES.length}/${data.user.starredRepositories.totalCount} repositories, wait ${TIMEOUT_SECONDS} seconds`;
-                    core.info(MSG);
-                    const aw = await setTimeout(TIMEOUT, `API limit has been restaured after ${TIMEOUT_SECONDS} seconds.`);
-                    core.info(aw);
-                } else {
-                    hasNextPage = false;
-                    data = null
-                    return
+            let attempt = 0;
+            while (true) {
+                try {
+                    data = await this.okt.graphql(query, { username: this.username, first: 100, endCursor });
+                    REPOSITORIES.push(...data.user.starredRepositories.nodes);
+                    const PAGEINFO = data.user.starredRepositories.pageInfo;
+                    core.debug(`pageInfo: ${JSON.stringify(PAGEINFO)}`);
+                    hasNextPage = PAGEINFO.hasNextPage ?? false;
+                    endCursor = PAGEINFO.endCursor;
+                    break;
+                } catch (e) {
+                    attempt += 1;
+                    if (!this.isRetryableError(e) || attempt > MAX_RETRIES) {
+                        throw e;
+                    }
+
+                    const message = e instanceof Error ? e.message : String(e);
+                    core.warning(`GitHub request failed (${message}). Retrying in ${TIMEOUT_SECONDS} seconds.`);
+                    await setTimeout(TIMEOUT);
                 }
             }
         } while (hasNextPage);
@@ -57,6 +56,16 @@ class GithubService {
         } else {
             return null
         }
+    }
+
+    private isRetryableError(error: unknown): boolean {
+        const status = typeof error === 'object' && error !== null && 'status' in error
+            ? error.status
+            : undefined;
+        const message = error instanceof Error ? error.message : String(error);
+
+        return (typeof status === 'number' && [403, 429, 500, 502, 503, 504].includes(status))
+            || /rate limit|secondary rate limit|timeout|temporarily unavailable/i.test(message);
     }
 
     private async getAdmin(data: OktokitResponse) {
