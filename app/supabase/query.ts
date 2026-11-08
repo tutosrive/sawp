@@ -10,7 +10,7 @@ export default async function createInsertQuery(data: OktokitResponse, isFirst: 
         { name: 'topic', data: topics },
         { name: 'repository', data: repositories },
         { name: 'topicXrepository', data: topicsXrepo },
-        { name: 'db_version', data: `($$${version}$$)` },
+        { name: 'db_version (version)', data: `($$${version}$$)` },
     ];
     isFirst === true ? tables.unshift({ name: 'admin', data: admin }) : null;
     let query: string = '';
