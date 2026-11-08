@@ -5,6 +5,7 @@ declare class GithubService {
     private okt;
     constructor();
     getData(): Promise<OktokitResponse>;
+    private isRetryableError;
     private getAdmin;
     private parseData;
 }
